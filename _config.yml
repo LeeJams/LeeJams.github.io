@@ -13,7 +13,7 @@ mode: dark # default theme "dark" | "light"
 author:
   name: LeeJam # author name
   bio: >- # tell to the world
-    프론트앤드 주니어 개발자 리잼의 소소한 개발블로그
+    주니어 개발자 리잼의 소소한 개발블로그 💻
     <a href="https://github.com/LeeJams" target="_blank" rel="noopener">@github</a>.
   username: LeeJams # general username
   github: LeeJams # github username
@@ -26,7 +26,7 @@ author:
 url: "https://LeeJams.github.io"
 baseurl:
 permalink: /:title/
-google_analytics: # leave it blank if not wish
+google_analytics: G-N7CRZG79RN # leave it blank if not wish
 fb_appid:
 
 # Collection setting
