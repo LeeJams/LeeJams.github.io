@@ -1,8 +1,8 @@
 # Site settings
 title: LeeJam's Codng # site title
 description: >- # site description
-  He's writing in Bahasa about web technology and experience as a journal 
-  for documentation things that he learned, meet him <a href="https://github.com/piharpi" target="_blank" rel="noopener">@github</a>.
+  프론트앤드 주니어 개발자 리잼의 소소한 블로그
+  <a href="https://github.com/piharpi" target="_blank" rel="noopener">@github</a>.
 lang: ko-KR # default lang
 timezone: Asia/Seoul # set your timezone
 image: assets/img/ogp.png # This image used for Open Graph more info https://ogp.me/
