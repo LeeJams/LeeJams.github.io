@@ -1,8 +1,8 @@
 # Site settings
 title: LeeJam's Codng # site title
 description: >- # site description
-  프론트앤드 주니어 개발자 리잼의 소소한 블로그
-  <a href="https://github.com/piharpi" target="_blank" rel="noopener">@github</a>.
+  프론트앤드 주니어 개발자 리잼의 소소한 개발블로그
+  <a href="https://github.com/LeeJams" target="_blank" rel="noopener">@github</a>.
 lang: ko-KR # default lang
 timezone: Asia/Seoul # set your timezone
 image: assets/img/ogp.png # This image used for Open Graph more info https://ogp.me/
@@ -13,8 +13,8 @@ mode: dark # default theme "dark" | "light"
 author:
   name: LeeJam # author name
   bio: >- # tell to the world
-    The minimalist Jekyll theme, light and dark mode support, for running a personal site and blog, 
-    meet Klisé theme at <a href="https://github.com/LeeJams" target="_blank" rel="noopener">@github</a>.
+    프론트앤드 주니어 개발자 리잼의 소소한 개발블로그
+    <a href="https://github.com/LeeJams" target="_blank" rel="noopener">@github</a>.
   username: LeeJams # general username
   github: LeeJams # github username
   twitter: twitter_username # twitter username
