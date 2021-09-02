@@ -11,8 +11,16 @@
     {% if page.title %}{{ page.title | escape }} - {{ site.title }}{% else %}{{
     site.title | escape }}{% endif %}
   </title>
-  {% include google_analytics %}
-  {% include gtag.html %}
+  {% if site.gtag %}
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.gtag }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', '{{ site.gtag }}');
+  </script>
+  {% endif %}
   <link rel="alternate" href="{{
       page.url | remove: 'index.html' | remove: '.html' | absolute_url
     }}" hreflang="{{ site.lang }}" />
