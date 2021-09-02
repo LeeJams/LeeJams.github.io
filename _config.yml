@@ -27,16 +27,10 @@ url: "https://LeeJams.github.io"
 baseurl:
 permalink: /:title/
 fb_appid:
-google_analytics: 2775094717
 
 # Analytics
-analytics:
-  provider:
-    "google-gtag"
-    # false (default), "google", "google-universal", "google-gtag", "custom"
-  google:
-    tracking_id: "G-N7CRZG79RN"
-    anonymize_ip: # true, false (default)
+google_analytics: "2775094717"
+gtag: "G-N7CRZG79RN"
 
 # Collection setting
 collections:
