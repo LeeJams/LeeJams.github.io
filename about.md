@@ -1,11 +1,15 @@
 ---
-title: About Me.
+title: About Us.
 permalink: /about/
 layout: page
 excerpt: Hello peeps, I'm web developer, living in Seoul. This blog for documentation about my programming journey.
 comments: false
 ---
 
+### Contact LeeJam ✨
+
+- {{ site.author.email1 }}
+- <a href="https://github.com/LeeJams" target="_blank" rel="noopener">github.com/{{ site.author.github1 }}</a>
 
 ### Langages
 
@@ -57,7 +61,7 @@ comments: false
   <img src="https://img.shields.io/badge/eclipse-131418?&style=for-the-badge&logo=EclipseIDE&logoColor=525C86" />
 </div>
 
-**Contact Me ✨**
+### Contact DongUk ✨
 
-- {{ site.author.email }}
-- <a href="https://github.com/LeeJams" target="_blank" rel="noopener">github.com/{{ site.author.github }}</a>
+- {{ site.author.email2 }}
+- <a href="https://github.com/LeeJams" target="_blank" rel="noopener">github.com/{{ site.author.github2 }}</a>
