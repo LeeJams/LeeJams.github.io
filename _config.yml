@@ -27,6 +27,7 @@ url: "https://LeeJams.github.io"
 baseurl:
 permalink: /:title/
 fb_appid:
+google_analytics: 2775094717
 
 # Analytics
 analytics:
