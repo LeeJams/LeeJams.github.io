@@ -102,16 +102,16 @@ comments: false
   <img src="https://img.shields.io/badge/GraphQl-131418?style=for-the-badge&logo=graphql&logoColor=E434AA" />
   <img src="https://img.shields.io/badge/Docker-131418?style=for-the-badge&logo=docker&logoColor=2496ED" />
   <img src="https://img.shields.io/badge/Ubuntu-131418?style=for-the-badge&logo=ubuntu&logoColor=E95420" />
-  <img src="https://img.shields.io/badge/Sass-131418?style=for-the-badge&logo=sass&logoColor=white" />
+  <img src="https://img.shields.io/badge/Sass-131418?style=for-the-badge&logo=sass&logoColor=CC6699" />
   <img src="https://img.shields.io/badge/Markdown-131418?style=for-the-badge&logo=markdown&logoColor=white" />
-</div> -->
+</div>
 
 ### IDE
 
 <div>
   <img src="https://img.shields.io/badge/Visual_Studio_Code-131418?style=for-the-badge&logo=visual%20studio%20code&logoColor=0078D4" />
-  <img src="https://img.shields.io/badge/IntelliJIDEA-131418?style=for-the-badge&logo=intellij-idea&logoColor=000000" />
-  <img alt="ECLIPSE" src="https://img.shields.io/badge/eclipse-131418?&style=for-the-badge&logo=EclipseIDE&logoColor=434548" />
+  <img src="https://img.shields.io/badge/IntelliJIDEA-131418?style=for-the-badge&logo=intellij-idea&logoColor=white" />
+  <img src="https://img.shields.io/badge/eclipse-131418?&style=for-the-badge&logo=EclipseIDE&logoColor=525C86" />
 </div>
 
 **Contact Me ✨**
