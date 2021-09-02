@@ -64,12 +64,22 @@ comments: false
 <img src="https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white" />
 </div> -->
 
+### Langages
+
+<div>
+<img src="https://img.shields.io/badge/HTML5-131418?style=for-the-badge&logo=html5&logoColor=E34F26" />
+<img src="https://img.shields.io/badge/CSS3-131418?style=for-the-badge&logo=css3&logoColor=1572B6" />
+<img src="https://img.shields.io/badge/JavaScript-131418?style=for-the-badge&logo=javascript&logoColor=f7df1e" />
+<img src="https://img.shields.io/badge/TypeScript-131418?style=for-the-badge&logo=typescript&logoColor=007ACC" />
+<img src="https://img.shields.io/badge/Java-131418?style=for-the-badge&logo=java&logoColor=ED8B00" />
+</div>
+
 ### IDE
 
 <div>
-<img alt="ECLIPSE" src="https://img.shields.io/badge/eclipse-d2ddf2?&style=for-the-badge&logo=EclipseIDE&logoColor=2c2255" />
 <img src="https://img.shields.io/badge/Visual_Studio_Code-d2ddf2?style=for-the-badge&logo=visual%20studio%20code&logoColor=0078D4" />
 <img src="https://img.shields.io/badge/IntelliJIDEA-d2ddf2.svg?style=for-the-badge&logo=intellij-idea&logoColor=000000" />
+<img alt="ECLIPSE" src="https://img.shields.io/badge/eclipse-d2ddf2?&style=for-the-badge&logo=EclipseIDE&logoColor=2c2255" />
 </div>
 
 **Contact Me ✨**
