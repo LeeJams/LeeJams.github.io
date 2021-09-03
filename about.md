@@ -6,13 +6,14 @@ excerpt: Hello peeps, I'm web developer, living in Seoul. This blog for document
 comments: false
 ---
 
-### Contact LeeJam ✨
+#### Contact LeeJam ✨
 
 - {{ site.author.email1 }}
 - <a href="https://github.com/LeeJams" target="_blank" rel="noopener">github.com/{{ site.author.github1 }}</a>
 
-### Langages
+**Langages**
 
+<hr>
 <div>
   <!-- <img src="https://img.shields.io/badge/HTML5-131418?style=for-the-badge&logo=html5&logoColor=E34F26" />
   <img src="https://img.shields.io/badge/CSS3-131418?style=for-the-badge&logo=css3&logoColor=1572B6" /> -->
@@ -21,15 +22,17 @@ comments: false
   <img src="https://img.shields.io/badge/Java-131418?style=for-the-badge&logo=java&logoColor=ED8B00" />
 </div>
 
-### Database
+**Database**
 
+<hr>
 <div>
   <img src="https://img.shields.io/badge/MySQL-131418?style=for-the-badge&logo=mysql&logoColor=4479A1" />
   <img src="https://img.shields.io/badge/Oracle-131418?style=for-the-badge&logo=oracle&logoColor=F80000" />
 </div>
 
-### Frameworks & Library
+**Frameworks & Library**
 
+<hr>
 <div>
   <img src="https://img.shields.io/badge/Node.js-131418?style=for-the-badge&logo=nodedotjs&logoColor=339933" />
   <img src="https://img.shields.io/badge/Vue.js-131418?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D" />
@@ -41,8 +44,9 @@ comments: false
   <img src="https://img.shields.io/badge/Bootstrap-131418?style=for-the-badge&logo=bootstrap&logoColor=7952B3" />
 </div>
 
-### Others
+**Others**
 
+<hr>
 <div>
   <img src="https://img.shields.io/badge/Git-131418?style=for-the-badge&logo=git&logoColor=F05032" />
   <img src="https://img.shields.io/badge/Amazon_AWS-131418?style=for-the-badge&logo=amazonaws&logoColor=FF9900" />
@@ -53,15 +57,16 @@ comments: false
   <img src="https://img.shields.io/badge/Markdown-131418?style=for-the-badge&logo=markdown&logoColor=white" />
 </div>
 
-### IDE
+**IDE**
 
+<hr>
 <div>
   <img src="https://img.shields.io/badge/Visual_Studio_Code-131418?style=for-the-badge&logo=visual%20studio%20code&logoColor=0078D4" />
   <img src="https://img.shields.io/badge/IntelliJIDEA-131418?style=for-the-badge&logo=intellij-idea&logoColor=white" />
   <img src="https://img.shields.io/badge/eclipse-131418?&style=for-the-badge&logo=EclipseIDE&logoColor=525C86" />
 </div>
 
-### Contact DongUk ✨
+#### Contact DongUk ✨
 
 - {{ site.author.email2 }}
 - <a href="https://github.com/LeeJams" target="_blank" rel="noopener">github.com/{{ site.author.github2 }}</a>
