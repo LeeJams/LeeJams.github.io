@@ -66,7 +66,7 @@ comments: false
   <img src="https://img.shields.io/badge/eclipse-131418?&style=for-the-badge&logo=EclipseIDE&logoColor=525C86" />
 </div>
 
-#### Contact DongUk ✨
+<!-- #### Contact DongUk ✨
 
 - {{ site.author.email2 }}
-- <a href="https://github.com/LeeJams" target="_blank" rel="noopener">github.com/{{ site.author.github2 }}</a>
+- <a href="https://github.com/LeeJams" target="_blank" rel="noopener">github.com/{{ site.author.github2 }}</a> -->
