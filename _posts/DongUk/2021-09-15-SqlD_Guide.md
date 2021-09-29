@@ -111,7 +111,7 @@ author: "DongUk"
 * 각 함수들에서 컬럼을 조합하게 되면 어떤 식으로 결과값이 도출되는지 확인
 
   예를 들어
-  ```
+  ```sql
   SELECT
   	DECODE(GROUPING(DNAME),1,'ALL DEPARTMENTS',DNAME) AS DNAME,
   	DECODE(GROUPING(JOB),1,'ALL JOB',JOB) AS JOB,
