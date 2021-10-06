@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "JavaScript 프로토타입 사용법"
+title: "JavaScript 프로토타입 사용법과 사용이유"
 tags: [JAVASCRIPT]
 author: "LeeJam"
 ---
