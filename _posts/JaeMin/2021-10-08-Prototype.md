@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "JavaScript 프로토타입이란?"
-tags: [JAVASCRIPT]
+tags: [JAVASCRIPT, PROTOTYPE]
 author: "LeeJam"
 ---
 
@@ -17,7 +17,7 @@ Prototype 간단한 기능을 구현을 위해 크게 쓰일 필요가 없고 �
 ## Prototype
 >자바스크립트의 모든 객체는 자신을 생성한 객체 원형에 대한 숨겨진 연결을 갖는다. 이때 **자기 자신을 생성하기 위해 사용된 객체원형을 프로토타입이**란 한다. 
 
-프로토타입, 나는 개인적으로 프로토타입은 상속이라고 생각하니 쉽게 이해가 됐다.<br />
+프로토타입은 상속이라고 생각하면 쉽게 이해가 된다. 자바스크립트는 프로토타입 기반으로 상속을 구현하여 불필요한 중복을 제거한다.<br />
 배열을 예로 들어보자. (자바스크립트에서 배열은 객체이다) 배열을 선언하면 **map, reduce, forEach, push...** 등 배열에 관련된 다양한 함수를 사용할 수 있다.
 ```javascript
 const arr = ['Lee', 'Kim', 'Park'];
@@ -26,30 +26,32 @@ const newArr = arr.map(n => n + '1'); // ['Lee1', 'Kim1', 'Park1']
 const newArr2 = arr.concat('Cho'); // ['Lee', 'Kim', 'Park', 'Cho']
 ```
 그저 배열을 선언했을 뿐인데 어떻게 저런 메소드를 사용할 수 있을까?<br />
-밑의 사진을 보며 쉽게 이해해 보자.
+밑의 이미지을 보면 쉽게 이해할 수 있다.
 <p>
   <center>
-    <img src="../../assets/img/2021-09-26-Prototype/prototype.png" alt="Prototype">
+    <img src="../../assets/img/prototype/prototype.png" alt="Prototype">
   </center>
 </p>
 
-배열이 선언되면 배열이 생성되면서 부모?를 자동으로 할당해 준다. 즉, 어떠한 객체가 만들어지기 위해 그 객체의 모태가 되는 녀석을 **프로토타입**이라고 한다.<br />
-위에 사진을 보다시피 배열을 선언하니 자동으로 선언된 배열에 Array.prototype를 부모로 자동 할당해줬다.
+배열이 선언되면 **배열이 생성되면서 부모객체를 자동으로 할당**해 준다. 즉, 어떠한 객체가 만들어지기 위해 그 객체의 모태가 되는 녀석을 **프로토타입**이라고 한다.<br />
+위, 이미지을 보다시피 배열을 선언하니 자동으로 선언된 배열에 Array.prototype라는 부모객체를 자동 할당해줬다.
 
-이제 콘솔을 찍어 생성한 배열을 살펴보자.
+이제 콘솔로그로 실제 생성한 배열을 살펴보자.
 ```javascript
 console.dir(arr);
 ```
 <p>
   <center>
-    <img src="../../assets/img/2021-09-26-Prototype/arr_prototype.png" alt="Array_Prototype">
+    <img src="../../assets/img/prototype/arr_prototype.png" alt="Array_Prototype">
   </center>
 </p>
 console.dir로 arr을 찍어보면 밑에 **[[Prototype]]**으로 연결된 자신의 프로토타입을 확인할 수 있다. 이 프로토타입을 확인해보면
-우리가 사용하는 Array 배열에 관한 다양한 메소드가 정의된 것을 확인할 수 있다.
+우리가 사용하는 Array 배열에 관한 다양한 메소드가 정의된 것을 확인할 수 있다.<br />
+이렇게 하여 생성한 배열에 할당된 **부모 객체**의 다양한 메소드들을 사용할 수 있게 된것이다.
 
-그러면 이 프로토타입을 왜 사용하는걸까?<br />
-내용이 길어지면 보기 힘들고 이해하기 힘들거라 생각해 추후 업로드 할 글에서 확인해보자.
+그렇다면 **어떻게?, 왜?** 프로토타입을 사용하는걸까?<br />
+
+다음에 업로드 할 글에서 사용법과 이유를 확인해보자!
 
 To Be Continue....
 
