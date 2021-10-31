@@ -40,11 +40,11 @@ author: "DongUk"
 
 다음에 저도 기회가 되면 세미나에 직접 참여해 보고 싶습니다
 
-1. <a href="http://aeternumeglooscom/">조영호님 블로그</a>
+**1.  <a href="http://aeternumeglooscom/">조영호님 블로그</a>**
 
-2. <a href="https://youtube/dJ5C4qRqAgA">우아한테크세미나</a>
+**2.  <a href="https://youtube/dJ5C4qRqAgA">우아한테크세미나</a>**
 
-3. <a href="https://wwwyoutubecom/watch?v=8OclN9kZTE4">토비의스프링유튜브</a>
+**3.  <a href="https://wwwyoutubecom/watch?v=8OclN9kZTE4">토비의스프링유튜브</a>**
 
 
 ## 책 소개
