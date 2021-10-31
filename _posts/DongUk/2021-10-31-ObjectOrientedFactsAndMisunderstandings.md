@@ -5,7 +5,9 @@ tags: [Object-Oriented, JAVA]
 author: "DongUk"
 ---
 
-## 책을 소개하기 전
+
+![book](//assets/img/2021-10-31-ObjectOrientedFactsAndMisunderstandings/book.jpg)
+## 객체지향의 사실과 오해
 안녕하세요 Jams & Donguk의 Donguk입니다
 
 최근에 읽은 '객체지향의 사실과 오해'라는 책을 읽고
