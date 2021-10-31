@@ -6,7 +6,7 @@ author: "DongUk"
 ---
 
 
-<img src="//assets/img/2021-10-31-ObjectOrientedFactsAndMisunderstandings/book.jpg"  width="300"/>
+<img src="../../assets/img/2021-10-31-ObjectOrientedFactsAndMisunderstandings/book.jpg"  width="300"/>
 
 ## 객체지향의 사실과 오해
 안녕하세요 Jams & Donguk의 Donguk입니다
@@ -214,7 +214,7 @@ author: "DongUk"
 실제 형사 재판의 절차는 다음과 같습니다
 
 <center>
-<img src="//assets/img/2021-10-31-ObjectOrientedFactsAndMisunderstandings/OrderOfTrial.png"  width="800"/>
+<img src="../../assets/img/2021-10-31-ObjectOrientedFactsAndMisunderstandings/OrderOfTrial.png"  width="800"/>
 </center>
 
 위 과정 중 실제 공판이 열리기 전까지 로직을 살펴보도록 하겠습니다
@@ -232,7 +232,7 @@ author: "DongUk"
 위 객체들 중 실제 공판이 열리기 전 필요한 객체들은 아래와 같습니다
 
 <center>
-<img src="//assets/img/2021-10-31-ObjectOrientedFactsAndMisunderstandings/logic01.png"  width="500"/>
+<img src="../../assets/img/2021-10-31-ObjectOrientedFactsAndMisunderstandings/logic01.png"  width="500"/>
 </center>
 
 3. <b>명세 관점에서 인터페이스 선정</b>
@@ -246,7 +246,7 @@ author: "DongUk"
 즉, 아래와 같이 구성되게 됩니다
 
 <center>
-<img src="//assets/img/2021-10-31-ObjectOrientedFactsAndMisunderstandings/logic02.png"  width="250"/>
+<img src="../../assets/img/2021-10-31-ObjectOrientedFactsAndMisunderstandings/logic02.png"  width="250"/>
 </center>
 
 해당 그림을 Java Code로 표현해 보면
