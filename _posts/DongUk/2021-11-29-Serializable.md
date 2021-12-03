@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Seializable의 위험성"
-tags: [Java, Seializable, 직렬화]
+title: "Serialization"
+tags: [Java, Serialization, 직렬화]
 author: "DongUk"
 ---
 
