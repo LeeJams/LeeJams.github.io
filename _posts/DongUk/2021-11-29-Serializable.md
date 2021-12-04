@@ -5,7 +5,6 @@ tags: [Java, Serialization, 직렬화]
 author: "DongUk"
 ---
 
-
 ## Intro
 안녕하세요 Jams & Donguk의 **Donguk**입니다
 
@@ -24,7 +23,7 @@ author: "DongUk"
 >자바 진영에서 사용하는 언어(Byte Type)로된 파일을 JVM 메모리 위 데이터로 올려 파일을 실행가능한 상태로 만드는 것
 
 이해 못하셔도 됩니다. 그럼 글 시작하겠습니다.
-<br/><br/><br/><br/>
+<br/>
 
 ## 직렬화를 알기 전 배경지식
 ### 직렬화란?
@@ -34,7 +33,7 @@ Java와 외부 시스템(DB 등등)이 통신을 하기 위해서는 Java Object
 **<strong style="color: #bb4177;">'역직렬화'</strong>**는 반대로 외부 데이터를 Java가 이해할 수 있는 형태로 바꾸는 것을 의미합니다.
 그렇다면 직렬화는 왜 필요할까요?
 <br/>
-* *컴퓨터는 객체나 변수를 인식할 수 없으며 실제로는 2진수 8자리로 구성된 Byte타입을 인식합니다.*<br/><br/>
+* *컴퓨터는 객체나 변수를 인식할 수 없으며 실제로는 2진수 8자리로 구성된 Byte타입을 인식합니다.*<br/>
 
 직렬화가 왜 필요한지를 알기 위해서는 기본적으로 간단한 **컴퓨터 상식**을 알고 갈 필요가 있습니다.
 <br/>
@@ -42,9 +41,10 @@ Java와 외부 시스템(DB 등등)이 통신을 하기 위해서는 Java Object
 따라서 개별 프로세스가 사용하는 **<strong style="color: #bb4177;">'가상메모리주소공간(Virtual Address Space, 통칭 VAS)'</strong>**를 부여하는 방법 또한 서로 다릅니다.
 
 * VAS(Vertual Address Space)
-** *오늘날 대부분의 운영 체제에는 가상 메모리 기법이 적용되어 있습니다.*
-<br/>
-** *이 가상 메모리에서의 주소 공간, 즉 가상 주소 공간은 프로세스가 참조할 수 있는 주소들의 범위이며, 하나의 프로세스 당 하나의 가상 주소 공간을 할당받습니다.*
+<br/><br/>
+*오늘날 대부분의 운영 체제에는 가상 메모리 기법이 적용되어 있습니다.*
+<br/><br/>
+*이 가상 메모리에서의 주소 공간, 즉 가상 주소 공간은 프로세스가 참조할 수 있는 주소들의 범위이며, 하나의 프로세스 당 하나의 가상 주소 공간을 할당받습니다.*
 
 문제는 이 *VAS*를 부여하는 방식이 모두 다르다보니 Byte타입을 해석하는 컴파일러도 모두 달랐습니다.
 때문에 Window에서 C언어로 컴파일한 파일을 Linux에서는 **실행할 수 없었던 시절**이었습니다.
@@ -64,13 +64,12 @@ JVM 내 Heap, Stack등의 메모리에 적재된 Primitive Type, Reference Type�
 > 2. 역직렬화<br/>
 위에서 생성된 파일을 실행하고자 하는 환경에서 실행하면 JVM이 역직렬화를 통해 해당 파일 내 데이터들을 JVM 메모리위에 올려 데이터 활용
 
-<br/><br/>
 여기서 알 수 있듯이 원래는 Serialization이 DTO나 VO 때문에 등장했던 것이 아닙니다. 원래 JVM은 직렬화를 진행하고 있었습니다.
 <br/>
 다만 Network 통신을 할 때에도 객체를 그대로 전달할 수 없다보니 데이터 변환이 필요하여 Serializable을 DTO나 VO, DOMAIN등에 사용한 것 뿐입니다.
 <br/>
 그럼 왜 우리는 굳이 java.io.serializable을 직접 상속받아 serialVersionUID를 정의할까요?
-<br/><br/><br/><br/>
+<br/>
 
 ## JAVA의 Serialization(직렬화) 구현 시 주의사항
 ### Serializable을 상속받아 serialVersionUID를 선언하는 이유
@@ -112,7 +111,7 @@ B서버에서는 위 **serialVersionUID**를 확인하고 UID에 맞는 객체�
 3. **만약 직렬화할 때 사용한 serialVersionUID의 값과 역직렬화 하기 위해 사용했던 serialVersionUID값이 다르다면 InvalidClassException이 발생할 수 있습니다.**
 4. **이런 문제를 해결하기 위해 클래스 생성 시 Serializable를 상속받고 해당 클래스에 고유한 SerialVerionUID를 심습니다.**
 5. **해당 객체를 수신하는 쪽에서 송신한 쪽과 SerialVerionUID로 맵핑되는 객체를 찾습니다. 이후 역직렬화해줍니다.**
-<br/><br/><br/><br/>
+<br/><br/>
 
 ## 그럼 데이터 통신 시 serializable은 반드시 상속받아야 하는가?
 결론적으로 이야기하자면 어디서 사용하느냐에 따라 다르겠지만 웹개발을 하는 입장에서는 **<strong style="color: #bb4177;">권장하고 싶지 않습니다.</strong>**
@@ -128,8 +127,6 @@ B서버에서는 위 **serialVersionUID**를 확인하고 UID에 맞는 객체�
 7. 직렬화된 데이터는 타입 정보등의 클래스 **메타정보를 포함하기 때문에 JSON 포맷에 비해 약 2~10배 더 사이즈가 큼**
 > 특히 직렬화된 데이터를 메모리 서버(Redis, Memcached)에 저장하는 환경에서 트래픽에 따라 네트워크 비용과 캐시 서버 비용이 급증할 수 있으므로, JSON 포맷으로의 변경을 고려해야 한다.
 
-<br/><br/><br/><br/>
-
 ## Tip
 1. 실제 파일을 생성하는 **'ObjectOutputStream'**은 대표적인 **'직렬화'**객체이며 반대로 **'ObjectInputStream'**은 **'역직렬화'**객체이다.
 2. DB, Network 통신 시 사용되는 DTO, VO, Domain의 serializable Interface는 '**java.io**.serializable'로 마찬가지로 io에 속한 객체이다.
@@ -141,7 +138,7 @@ public class Member implements Serializable {
 }
 ```
 4. 직렬화는 JSON이나 CSV등으로도 가능하다.
-<br/><br/><br/><br/>
+<br/><br/>
 
 ## 마무리
 DTO나 VO 사용 시 반드시 사용해야하는 줄 알았던 serializable은 사실 json으로 통신하고 있던 우리 서비스에는 불필요한 코드였습니다.<br/>
