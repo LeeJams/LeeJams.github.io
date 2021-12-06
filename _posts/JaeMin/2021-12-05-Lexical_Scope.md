@@ -56,20 +56,41 @@ bar();
 ### 클로저
 그럼 이제 본론으로 돌아와서 클로저란 무엇일까?
 <br />
-저는 쉽게 **"자신이 선언될 당시의 환경을 기억하는 함수"**로 정의한 것이 이해하기 쉬웠습니다.
+쉽게 **"자신이 선언될 당시의 환경을 기억하는 함수"**로 정의한 것이 이해하기 쉬웠다.
 <br />
-즉, 자신이 정의될 때의 **렉시컬 환경을 기억**하는 것입니다.
+즉, 자신이 정의될 때의 **렉시컬 환경을 기억**하는 것이다.
 
-코드를 한번 보자
+코드를 한번 보자.
 ```javascript
-const x = "global"
-
-function outer() {
-  const x = 'function scope';
-  const inner = function () { console.log(x); };
-  return inner;
+function lostFunc() {
+  var name = "LeeJam";
+  function getName() {
+    console.log(name);
+  }
+  return getName;
 }
 
-const innerFunc = outer();
-innerFunc();
+var checkFunc = lostFunc();
+
+getName();
+/* 
+실행결과
+
+LeeJam
+undefined 
+*/
 ```
+일반적으로는 **함수 안의 지역 변수들은 그 함수가 처리되는 동안에만 존재하기 때문에 getName 함수가 리턴되면 name변수에 접근 할 수 없다고 예상**된다. (실제로 몇몇 프로그래밍 언어에서는 그렇다)
+<br />하지만 <strong style="color: #bb4177;">자바스크립트의 모든 함수는 자신의 상위 스코프를 기억한다.</strong>라는 특성을 가지고 있다.
+
+1. **getName 함수**가 선언될 당시 위치는 **lostFunc의 내부**였다. 때문에 **getName 함수**의 **상위 스코프는 lostFunc 함수**가 된다. 
+2. 함수는 자신의 상위 스코프를 기억한다. **lostFunc 함수**를 **getName 함수**에서 참조하기 떄문에 lostFunc 함수는 **가비지 컬렉션의 대상이 되지 않는다.**
+
+즉, **MDN**에서 내린 정의 **클로저는 함수와 그 함수가 선언된 렉시컬 환경과의 조합이다.** 라는 말은 **'함수를 어디서 정의했는지에 따라 상위 스코프를 결정하는 렉시컬 스코프'** & **'자바스크립트의 모든 함수는 자신의 상위 스코프를 기억한다.'** 라는 함수의 특성을 조합한 것을 말하는 것이고 그것이 바로 <strong style="color: #bb4177;">클로저</strong>다.
+
+### 마무리
+오늘은 클로저와 클로저를 알기 위한 렉시컬 스코프에 관련된 내용을 가볍게 정리해봤습니다. 
+<br />
+다음엔 클로저의 활용에 관련된 글을 다뤄보겠습니다.
+
+피드백은 언제나 환영입니다.
