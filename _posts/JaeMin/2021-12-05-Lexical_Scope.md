@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "JavaScript 클로저"
+title: "JavaScript 클로저란?"
 tags: [JAVASCRIPT, CLOSURE]
 author: "LeeJam"
 ---
->**클로저는 함수와 그 함수가 선언된 렉시컬 환경과의 조합이다.  - MDN -**
+>**"A closure is the combination of a function and the lexical environment within which that function was declared"<br />클로저는 함수와 그 함수가 선언된 렉시컬 환경과의 조합이다.<br /> - MDN -**
 
 **클로저**는 자바스크립트를 공부하면 무조건 듣는 난해하기로 유명한 개념이다. 위 **MDN**에서 정의한 글을 보자... 무슨 말인지 전혀 이해를 할 수가 없다.
 
@@ -65,19 +65,18 @@ bar();
 function lostFunc() {
   var name = "LeeJam";
   function getName() {
-    console.log(name);
+    return name;
   }
   return getName;
 }
 
 var checkFunc = lostFunc();
 
-getName();
+checkFunc();
 /* 
 실행결과
 
 LeeJam
-undefined 
 */
 ```
 일반적으로는 **함수 안의 지역 변수들은 그 함수가 처리되는 동안에만 존재하기 때문에 getName 함수가 리턴되면 name변수에 접근 할 수 없다고 예상**된다. (실제로 몇몇 프로그래밍 언어에서는 그렇다)
