@@ -8,8 +8,8 @@ comments: false
 
 #### Contact LeeJam ✨
 
-- {{ site.author.email1 }}
-- <a href="https://github.com/LeeJams" target="_blank" rel="noopener">github.com/{{ site.author.github1 }}</a>
+- {{ site.author.email }}
+- <a href="https://github.com/LeeJams" target="_blank" rel="noopener">github.com/{{ site.author.github }}</a>
 
 **Langages**
 

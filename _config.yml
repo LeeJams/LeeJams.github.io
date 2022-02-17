@@ -1,7 +1,7 @@
 # Site settings
 title: LeeJam's Coding # site title
 description: >- # site description
-  주니어 개발자들의 소소한 기술블로그 💻
+  개발자 리잼의 소소한 개발 블로그 💻
   <a href="https://github.com/LeeJams" target="_blank" rel="noopener">@github</a>.
 lang: ko-KR # default lang
 timezone: Asia/Seoul # set your timezone
@@ -12,19 +12,19 @@ mode: dark # default theme "dark" | "light"
 
 # Profile settings
 author:
-  name: LeeJam / DongUk # author name
+  name: LeeJam # author name
   bio: >- # tell to the world
-    주니어 개발자들의 소소한 기술블로그 💻
-  username1: LeeJam # general username
-  username2: DongUk # general username
-  github1: LeeJams # github username
-  github2: jd6186 # github username
+    개발자 리잼의 소소한 개발 블로그 💻
+  username: LeeJam # general username
+  # username2: DongUk # general username
+  github: LeeJams # github username
+  # github2: jd6186 # github username
   twitter: twitter_username # twitter username
   facebook: https://www.facebook.com/jaemin.lee.5268 # facebook username
-  email1: leejam208@gmail.com # email adress
-  email2: leejam208@gmail.com # email adress
-  avatar1: /assets/img/avatar1.jpg # change with your own avatar
-  avatar2: /assets/img/avatar2.jpg # change with your own avatar
+  email: woals214@gmail.com # email adress
+  # email2: leejam208@gmail.com # email adress
+  avatar: /assets/img/avatar1.jpg # change with your own avatar
+  # avatar2: /assets/img/avatar2.jpg # change with your own avatar
 
 # URL settings
 url: "https://LeeJams.github.io"
