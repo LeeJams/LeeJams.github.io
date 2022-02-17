@@ -6,7 +6,7 @@ description: >- # site description
 lang: ko-KR # default lang
 timezone: Asia/Seoul # set your timezone
 #https://developers.facebook.com/tools/debug/sharing/batch/, https://developers.kakao.com/tool/clear/og 무효화 시켜야 이미지 갱신 됨
-image: assets/img/ogp.png # This image used for Open Graph more info https://ogp.me/
+image: assets/img/ogp.jpg # This image used for Open Graph more info https://ogp.me/
 repo: https://github.com/LeeJams/LeeJams.github.io # site repo [optional]
 mode: dark # default theme "dark" | "light"
 
