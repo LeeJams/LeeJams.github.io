@@ -3,7 +3,7 @@ title: LeeJam's Coding # site title
 description: >- # site description
   개발자 리잼의 소소한 개발 블로그 💻
   <a href="https://github.com/LeeJams" target="_blank" rel="noopener">@github</a>.
-lang: ko-KR # default lang
+lang: ko # default lang
 timezone: Asia/Seoul # set your timezone
 #https://developers.facebook.com/tools/debug/sharing/batch/, https://developers.kakao.com/tool/clear/og 무효화 시켜야 이미지 갱신 됨
 image: assets/img/ogp.jpg # This image used for Open Graph more info https://ogp.me/
