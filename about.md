@@ -1,5 +1,5 @@
 ---
-title: About Us.
+title: About Me
 permalink: /about/
 layout: page
 excerpt: Hello peeps, I'm web developer, living in Seoul. This blog for documentation about my programming journey.
@@ -9,7 +9,8 @@ comments: false
 #### Contact LeeJam ✨
 
 - {{ site.author.email }}
-- <a href="https://github.com/LeeJams" target="_blank" rel="noopener">github.com/{{ site.author.github }}</a>
+- <a href="https://github.com/LeeJams" target="_blank" rel="noopener">@ Github</a>
+- <a href="https://leejam.tistory.com/" target="_blank" rel="noopener">@ 리잼의 개발이야기</a>
 
 **Langages**
 

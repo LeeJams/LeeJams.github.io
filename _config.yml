@@ -1,7 +1,7 @@
 # Site settings
 title: LeeJam's Coding # site title
 description: >- # site description
-  개발자 리잼의 코딩테스트 풀이 블로그 🔢
+  개발자 리잼의 코딩테스트 풀이 블로그 💻
   <a href="https://github.com/LeeJams" target="_blank" rel="noopener">@github</a>.
 lang: ko # default lang
 timezone: Asia/Seoul # set your timezone
@@ -14,7 +14,8 @@ mode: dark # default theme "dark" | "light"
 author:
   name: LeeJam # author name
   bio: >- # tell to the world
-    개발자 리잼의 코딩테스트 풀이 블로그 🔢
+    개발자 리잼의 코딩테스트 풀이 블로그 💻<br />
+    <a href="https://leejam.tistory.com/" target="_blank" rel="noopener">@리잼의 개발이야기</a>
   username: LeeJam # general username
   # username2: DongUk # general username
   github: LeeJams # github username
