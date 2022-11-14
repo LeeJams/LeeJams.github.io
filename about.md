@@ -12,7 +12,7 @@ comments: false
 - <a href="https://github.com/LeeJams" target="_blank" rel="noopener">@ Github</a>
 - <a href="https://leejam.tistory.com/" target="_blank" rel="noopener">@ 리잼의 개발이야기</a>
 
-**Langages**
+<h4>Langages</h4> 
 
 <hr>
 <div>
@@ -23,7 +23,7 @@ comments: false
   <img src="https://img.shields.io/badge/Java-131418?style=for-the-badge&logo=java&logoColor=ED8B00" />
 </div>
 
-**Database**
+<h4>Database</h4>
 
 <hr>
 <div>
@@ -31,7 +31,7 @@ comments: false
   <img src="https://img.shields.io/badge/Oracle-131418?style=for-the-badge&logo=oracle&logoColor=F80000" />
 </div>
 
-**Frameworks & Library**
+<h4>Frameworks & Library</h4>
 
 <hr>
 <div>
@@ -45,7 +45,7 @@ comments: false
   <img src="https://img.shields.io/badge/Bootstrap-131418?style=for-the-badge&logo=bootstrap&logoColor=7952B3" />
 </div>
 
-**Others**
+<h4>Others</h4>
 
 <hr>
 <div>
@@ -58,7 +58,7 @@ comments: false
   <img src="https://img.shields.io/badge/Markdown-131418?style=for-the-badge&logo=markdown&logoColor=white" />
 </div>
 
-**IDE**
+<h4>IDE</h4>
 
 <hr>
 <div>
