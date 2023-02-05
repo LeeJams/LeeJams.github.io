@@ -15,7 +15,7 @@ excerpt: Sorted article by category.
 <div class="archive-tags">
   {%- for tag in site.categories -%}
   {% capture name %}{{ tag | first }}{% endcapture %}
-  <a class="tag tag-item" data-tag="{{name}}">{{ name }}</a>
+  <a class="tag tag-item" href="#{{name}}" data-tag="{{name}}">{{ name }}</a>
   {%- endfor -%}
 </div>
 
@@ -35,8 +35,25 @@ excerpt: Sorted article by category.
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet">
 <script>
+  try{
+    const hash = decodeURI($(location).attr('hash').slice(1));
+    console.log(hash);
+    if(hash) {
+      $('.hidden').removeClass('hidden');
+      $('.post-item').each((index, elem) => {
+        if (!elem.hasAttribute(`data-${hash}`)) {
+          $(elem).addClass('hidden');
+        }
+      });
+      $(`.tag`).removeClass('selected');
+      $(`.tag[data-tag=${hash}]`).addClass('selected');
+    }
+  }catch(e){
+    console.log(e);
+  }
+
   $("[data-tag]").click((e) => {
-    currentTag = e.target.dataset.tag;
+    const currentTag = e.target.dataset.tag;
     $('.hidden').removeClass('hidden');
     $('.post-item').each((index, elem) => {
       if (!elem.hasAttribute(`data-${currentTag}`)) {
