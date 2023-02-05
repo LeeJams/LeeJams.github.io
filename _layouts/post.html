@@ -39,7 +39,7 @@ layout: compress
             {% assign tags = page.tags %}
             <span itemprop="keywords">
               {% for tag in tags %}
-              <a class="tag" href="/tags/#{{tag | downcase | slugify}}">{{tag | upcase }}</a>{% unless forloop.last
+              <a class="tag">{{tag | upcase }}</a>{% unless forloop.last
               %},{% endunless %}
               {% endfor %}
             </span>
@@ -80,14 +80,9 @@ layout: compress
       {% include comments.html %}
       {% endif %} -->
       <div>
-        <script 
-          src="https://utteranc.es/client.js" 
-          repo="LeeJams/LeeJams.github.io" 
-          issue-term="pathname"
-          theme="github-dark" 
-          crossorigin="anonymous" 
-          async>
-        </script>
+        <script src="https://utteranc.es/client.js" repo="LeeJams/LeeJams.github.io" issue-term="pathname"
+          theme="github-dark" crossorigin="anonymous" async>
+          </script>
       </div>
 
     </main>
