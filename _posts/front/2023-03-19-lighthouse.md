@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Lighthouse를 이용한 사이트 성능 점검 및 개선"
-tags: [Chrome, Google, Lighthouse, 사이트, 성능, 최적화]
-category: ["최적화"]
+tags: [Chrome, Google, Lighthouse, 사이트, 성능, 최적화, WEB]
+category: ["WEB"]
 ---
 
 ![Logo](../../assets/img/front/lighthouse/logo.png)

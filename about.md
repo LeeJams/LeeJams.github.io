@@ -10,7 +10,6 @@ comments: false
 
 - {{ site.author.email }}
 - <a href="https://github.com/LeeJams" target="_blank" rel="noopener">@ Github</a>
-- <a href="https://leejam.tistory.com/" target="_blank" rel="noopener">@ 리잼의 개발이야기</a>
 
 <h4>Langages</h4> 
 
