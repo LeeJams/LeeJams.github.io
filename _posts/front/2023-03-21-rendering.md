@@ -23,7 +23,7 @@ Server-Side Rendering 그대로 해석하면 서버 측 렌더링입니다. SSR�
 ![CSR](../../assets/img/front/rendering/csr.png)
 _<center>출처: <a href="https://medium.com/walmartglobaltech/the-benefits-of-server-side-rendering-over-client-side-rendering-5d07ff2cefe8" target="_blank">The Benefits of Server Side Rendering Over Client Side Rendering</a></center>_
 
-Client-Side Rendering 클라이언트 측 렌더링, SSR과 반대로 CSR은 렌더링이 클라이언트의 브라우저에서 수행됩니다. 사용자가 웹 페이지를 요청하면 서버는 페이지를 렌더링하는 데 필요한 최소한의 HTML, CSS 및 JavaScript를 보냅니다. 브라우저가 초기 콘텐츠를 다운로드하면 JavaScript를 사용하여 콘텐츠를 동적으로 렌더링하고 필요에 따라 페이지를 업데이트합니다.
+Client-Side Rendering 클라이언트 측 렌더링, SSR과 반대로 CSR은 렌더링이 클라이언트의 브라우저에서 수행됩니다. **사용자가 웹 페이지를 요청하면 서버는 페이지를 렌더링하는 데 필요한 최소한의 HTML, CSS 및 JavaScript를 보냅니다.** 브라우저가 초기 콘텐츠를 다운로드하면 JavaScript를 사용하여 콘텐츠를 동적으로 렌더링하고 필요에 따라 페이지를 업데이트합니다.
 
 CSR은 초기 로드 시간이 느려질 수 있지만 보다 동적이고 대화형 웹 응용 프로그램을 사용할 수 있습니다. 특히 동적 콘텐츠가 많은 웹일 경우 사용자 환경이 더 원활하고 응답성이 향상됩니다.
 
