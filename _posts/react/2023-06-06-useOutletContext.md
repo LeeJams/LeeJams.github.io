@@ -24,7 +24,7 @@ Step 1, 2, 3, 4 컴포넌트를 children으로 받는 OrderLayout이 존재한�
 _<center>Step1.js</center>_
 
 받는 곳(children)에서는 **useOutletContext()**를 **import** 원하는 값을 가져와 사용이 가능하다.<br />
-**useOutletContext()**를 사용하게 된다면 라우터가 이동되어 Outlet에 대입되는 컴포넌트가 바껴도 상태는 OrderLayout에 존재하기 때문에 상태를 유지할 수 있다.
+**useOutletContext()**를 사용하게 된다면 라우터가 이동되어 **&lt;Outlet />**에 대입되는 컴포넌트가 바껴도 상태는 OrderLayout에 존재하기 때문에 상태를 유지할 수 있다.
 
 #### 정리
 
