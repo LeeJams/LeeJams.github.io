@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "React Router <Outlet> 컴포넌트에 props 전달하는 방법"
+title: "React Router <Outlet> 컴포넌트에 props 전달하는 방법 [useOutletContext()]"
 tags: [React, ReactRouter, Outlet, useOutletContext]
 category: ["REACT"]
 ---
@@ -20,7 +20,7 @@ Step 1, 2, 3, 4 컴포넌트를 children으로 받는 OrderLayout이 존재한�
 
 ### 사용 방법 - 사용
 
-![react layout](../../assets/img/outlet/use.png)
+![react use](../../assets/img/outlet/use.png)
 _<center>Step1.js</center>_
 
 받는 곳(children)에서는 **useOutletContext()**를 **import** 원하는 값을 가져와 사용이 가능하다.<br />
