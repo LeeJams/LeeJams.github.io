@@ -6,7 +6,7 @@ category: ["REACT"]
 ---
 
 <center>
-<img src="../../assets/img/location/path.png" />
+<img src="../../assets/img/location/path.png" alt="path" />
 </center>
 _<center>url path란?</center>_
 
