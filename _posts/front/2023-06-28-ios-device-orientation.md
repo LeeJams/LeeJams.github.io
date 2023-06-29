@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "IOS에서 Device Orientation Event 권한 얻는 방법"
-tags: [IOS, DeviceOrientationEvnet, AUTHORIZATION]
-category: ["IOS"]
+tags: [DeviceOrientationEvnet]
+category: ["WEB"]
 ---
 
 이번에 새싹톤에 참가해서 플로깅 서비스를 만들다. 걸음수 측정을 위해 Device Orientation Event를 사용하려는데 IOS에서 권한을 얻는 방법을 찾기가 힘들어서 정리해보았습니다. <br />
