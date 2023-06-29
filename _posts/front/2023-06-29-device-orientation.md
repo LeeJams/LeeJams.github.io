@@ -18,11 +18,9 @@ Device Orientation Event에는 세 개의 속성(alpha, beta, gamma)이 있으�
 - **gamma**: 기기의 y축 중심으로의 회전을 나타냅니다. 값의 범위는 -90부터 90도까지이며, 0도는 기기가 수평을 이루는 것을 의미합니다.
 
 <center>
-<div style="display: flex">
-  <img src="../../assets/img/front/orientation/alpha.gif" alt="alpha" />
-  <img src="../../assets/img/front/orientation/beta.gif" alt="beta" />
-  <img src="../../assets/img/front/orientation/gamma.gif" alt="gamma" />
-</div>
+<img src="../../assets/img/front/orientation/alpha.gif" alt="alpha" />
+<img src="../../assets/img/front/orientation/beta.gif" alt="beta" />
+<img src="../../assets/img/front/orientation/gamma.gif" alt="gamma" />
 </center>
 _<center>크롬 개발자 도구 Sensors 탭</center>_
 
