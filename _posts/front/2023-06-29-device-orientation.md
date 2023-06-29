@@ -81,8 +81,8 @@ startStepCounting();
 
 #### 정리
 
-[IOS에서 Device Orientation Event 권한 얻는 방법](https://leejams.github.io/ios-device-orientation/){:target="\_blank"}
-[MDN - DeviceOrientationEvent](https://developer.mozilla.org/en-US/docs/Web/API/DeviceOrientationEvent)
+[IOS에서 Device Orientation Event 권한 얻는 방법](https://leejams.github.io/ios-device-orientation/){:target="\_blank"}<br />
+[MDN - DeviceOrientationEvent](https://developer.mozilla.org/en-US/docs/Web/API/DeviceOrientationEvent){:target="\_blank"}
 
 걸음수 측정을 위해 열심히 개발하다 배운 것을 정리하게 되었습니다.<br />
 

@@ -53,7 +53,7 @@ if (check) {
 
 #### 정리
 
-[MDN - DeviceOrientationEvent](https://developer.mozilla.org/en-US/docs/Web/API/DeviceOrientationEvent)
+[MDN - DeviceOrientationEvent](https://developer.mozilla.org/en-US/docs/Web/API/DeviceOrientationEvent){:target="\_blank"}
 
 걸음수 측정을 위해 열심히 개발하다 이렇게 또 하나 배운 것을 정리하게 되었습니다. <br />
 
