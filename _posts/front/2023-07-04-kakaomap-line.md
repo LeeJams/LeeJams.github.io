@@ -9,11 +9,9 @@ category: ["WEB"]
 
 ### Geolocation API
 
-Geolocation API는 사용자의 동의 하에 웹 애플리케이션에서 위치 정보에 접근할 수 있는 API입니다. Geolocation에 접근하기 위해서는 사용자의 위치 정보에 접근할 수 있는 권한이 필요하며, 권한을 얻지 못한 경우 사용자의 위치 정보를 가져올 수 없습니다.
+Geolocation API는 사용자의 동의 하에 웹 애플리케이션에서 위치 정보에 접근할 수 있는 API입니다. **Geolocation에 접근하기 위해서는 사용자의 위치 정보에 접근할 수 있는 권한이 필요하며, 권한을 얻지 못한 경우 사용자의 위치 정보를 가져올 수 없습니다.**
 
-권한을 얻는데 성공 했다면 getCurrentPosition() 메서드를 사용하여 사용자의 현재 위치를 가져올 수 있습니다.
-
-Geolocation API를 사용할 수 있는지 확인하고 권한을 요청하고 사용자의 위치 정보를 가져오는 코드는 아래와 같습니다.
+권한을 얻는데 성공 했다면 getCurrentPosition() 메서드를 사용하여 사용자의 현재 위치를 가져올 수 있습니다. **getCurrentPosition() 메서드는 성공과 실패 두 가지 콜백 함수를 인자로 받습니다.**
 
 ```javascript
 if (navigator.geolocation) {
@@ -48,12 +46,13 @@ API를 이용하기 위해서는 키를 발급받고 앱을 등록해야하는�
 
 ### 선 표시하기 - 기본
 
+<br />
 <center>
 <img src="../../assets/img/front/map/line.png" alt="line" />
 </center>
 _<center>선 그리기 좌표</center>_
 
-선을 표시하기 위해서는 라인에 대한 좌표 배열과 Polyline 객체를 생성해야합니다. Polyline 객체는 지도에 선을 표시할 수 있는 객체로 Polyline 객체를 생성할 때 지도 객체와 옵션을 지정해야합니다.
+**선을 표시하기 위해서는 라인에 대한 좌표 배열과 Polyline 객체를 생성해야합니다.** Polyline 객체는 지도에 선을 표시할 수 있는 객체로 Polyline 객체를 생성할 때 지도 객체와 옵션을 지정해야합니다.
 
 ```javascript
 const mapContainer = document.getElementById("map"); // 지도를 표시할 div
@@ -86,12 +85,15 @@ polyline.setMap(map);
 
 ### 실시간으로 선 표시하기 feat. React
 
+<br />
 <center>
 <img src="../../assets/img/front/map/realtime.png" alt="realtime" />
 </center>
 _<center>실시간 동선</center>_
 
-초기 진입 시에 Geolocation API을 사용할 수 있는지 확인하고 권한을 요청하는 과정을 거친 후 성공한다면 현재 위치를 기준으로 지도를 생성하고, 현재 위치를 기준으로 맵을 표시하는 코드입니다.
+이제 정말 실시간으로 동선을 그려보겠습니다.
+
+초기 진입 시에 Geolocation API을 사용할 수 있는지 확인하고 권한을 요청하는 과정을 거친 후 성공한다면 현재 위치를 기준으로 지도를 생성하고, 현재 위치를 기준으로 맵을 표시해줍니다.
 
 ```javascript
 const [map, setMap] = useState(null);
@@ -131,7 +133,7 @@ useEffect(() => {
 }, []);
 ```
 
-맵이 셋팅되면 5초마다 현재 위치를 가져오고 그 위치를 배열에 저장하여 다음 위치와 비교하여 선을 그리는 기능의 코드입니다.
+맵이 셋팅되면 5초마다 현재 위치를 가져오고 그 위치를 배열에 저장하여 다음 위치와 비교하여 선을 그려줍니다.
 
 ```javascript
 // 라인을 그리는 함수
@@ -187,6 +189,6 @@ useEffect(() => {
 
 피드백은 언제나 환영입니다. 😊
 
-[MDN - Geolocation API](https://developer.mozilla.org/ko/docs/Web/API/Geolocation_API)
-[Kakao Maps API - Home](https://apis.map.kakao.com/)
+[MDN - Geolocation API](https://developer.mozilla.org/ko/docs/Web/API/Geolocation_API){:target="\_blank"}<br />
+[Kakao Maps API - Home](https://apis.map.kakao.com/){:target="\_blank"}<br />
 [Maps API - 원, 선, 사각형, 다각형 표시하기 Sample](https://apis.map.kakao.com/web/sample/drawShape/){:target="\_blank"}
