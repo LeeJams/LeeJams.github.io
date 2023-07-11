@@ -2,7 +2,7 @@
 layout: post
 title: "[독서] 나는 네이버 프런트엔드 개발자입니다"
 tags: [NAVER, BOOK, FRONTEND, DEVELOPER]
-category: ["WEB"]
+category: ["DAILY"]
 ---
 
 <center>
