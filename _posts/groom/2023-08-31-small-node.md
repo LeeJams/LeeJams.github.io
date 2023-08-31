@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "[구름톤 챌린지] 14일차 미션 작은 노드 - JavaScript"
-tags: [JAVASCRIPT, GOORM, CHALLENGE, 구름톤, 구름톤챌린지, 작은, 노드, 작은 노드]
+tags:
+  [JAVASCRIPT, GOORM, CHALLENGE, 구름톤, 구름톤챌린지, 작은, 노드, 작은 노드]
 category: ["구름톤 챌린지"]
 ---
 
@@ -37,66 +38,68 @@ N개의 노드와 M개의 **양방향 간선**으로 이루어진 그래프가 �
 4 6 <br />
 
 출력 예 <br />
-5 6 
+5 6
 
 ##### 풀이
 
 ```javascript
-const readline = require('readline');
+const readline = require("readline");
 let rl = readline.createInterface({
-    input: process.stdin,
-	output: process.stdout,
+  input: process.stdin,
+  output: process.stdout,
 });
 let input = [];
-rl.on('line', (line) => {
-	input.push(line);
+rl.on("line", (line) => {
+  input.push(line);
 });
 
-rl.on('close', () => {
-    // 노드의 개수 N, 간선의 개수 M, 시작 노드의 번호 K
-	const [N, M, K] = input[0].split(" ").map(Number);
+rl.on("close", () => {
+  // 노드의 개수 N, 간선의 개수 M, 시작 노드의 번호 K
+  const [N, M, K] = input[0].split(" ").map(Number);
 
-    // 간선이 잇는 양 끝 정점의 번호 배열
-	const arr = input.slice(1).map(n => n.split(" ").map(Number));
+  // 간선이 잇는 양 끝 정점의 번호 배열
+  const arr = input.slice(1).map((n) => n.split(" ").map(Number));
 
-    // 노드의 연결관계를 위한 객체
-	const graph = {};
-	
-    // 배열을 가져와 노드의 연결관계를 매핑해준다.
-    // ex) {'1': [2, 3], '2': [1, 3], '3': [1, 4, 5] ...}
-	arr.forEach(v => {
-		const [a, b] = v;
+  // 노드의 연결관계를 위한 객체
+  const graph = {};
 
-        // 양방향 간선이기에 a, b를 다 이어준다.
-		if(!graph[a]) graph[a] = [];
-		if(!graph[b]) graph[b] = [];
-		graph[a].push(b);
-		graph[b].push(a);
-	})
-	
-    // 마지막 번호를 체크
-	let last = K;
-    // 시작 노드도 방문한 것으로 간주
-	const visited = [K];
-	
-	while(true) {
-        // 연결 관계가 없으면 멈춘다.
-		if(!graph[last]) break;
-        
-        // 마지막 번호가 가지고 있는 배열을 찾고
-        // filter() 메서드를 통해 방문했던 번호를 제외합니다.
-        // 오름차순 정렬을 해 0번 째 젤 작은 번호를 가져옵니다.
-		const minSite = graph[last].filter(n => !visited.includes(n)).sort((a, b) => a - b)[0];
+  // 배열을 가져와 노드의 연결관계를 매핑해준다.
+  // ex) {'1': [2, 3], '2': [1, 3], '3': [1, 4, 5] ...}
+  arr.forEach((v) => {
+    const [a, b] = v;
 
-        // 만약 번호가 없으면 멈춘다.
-		if(!minSite) break;
+    // 양방향 간선이기에 a, b를 다 이어준다.
+    if (!graph[a]) graph[a] = [];
+    if (!graph[b]) graph[b] = [];
+    graph[a].push(b);
+    graph[b].push(a);
+  });
 
-		last = minSite;
-		visited.push(minSite);
-	}
-	
-	console.log(visited.length + " " + last);
-})
+  // 마지막 번호를 체크
+  let last = K;
+  // 시작 노드도 방문한 것으로 간주
+  const visited = [K];
+
+  while (true) {
+    // 연결 관계가 없으면 멈춘다.
+    if (!graph[last]) break;
+
+    // 마지막 번호가 가지고 있는 배열을 찾고
+    // filter() 메서드를 통해 방문했던 번호를 제외합니다.
+    // 오름차순 정렬을 해 0번 째 젤 작은 번호를 가져옵니다.
+    const minSite = graph[last]
+      .filter((n) => !visited.includes(n))
+      .sort((a, b) => a - b)[0];
+
+    // 만약 번호가 없으면 멈춘다.
+    if (!minSite) break;
+
+    last = minSite;
+    visited.push(minSite);
+  }
+
+  console.log(visited.length + " " + last);
+});
 ```
 
 ##### 정리
