@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "[구름톤 챌린지] 10일차 미션 GameJam - JavaScript"
-tags: [JAVASCRIPT, GOORM, CHALLENGE, 구름톤, 구름톤챌린지]
+title: "[구름톤 챌린지] 14일차 미션 작은 노드 - JavaScript"
+tags: [JAVASCRIPT, GOORM, CHALLENGE, 구름톤, 구름톤챌린지, 작은, 노드, 작은 노드]
 category: ["구름톤 챌린지"]
 ---
 
