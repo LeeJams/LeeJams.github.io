@@ -5,7 +5,9 @@ tags: [ERROR, ANDROID, DEPLOY, APP, ERR_CLEARTEXT_NOT_PERMITTED]
 category: ["APP"]
 ---
 
+<center>
 <img src="../../assets/img/app/ERR_CLEARTEXT_NOT_PERMITTED.jpeg" alt="ERR_CLEARTEXT_NOT_PERMITTED" style="width: 500px" />
+</center>
 
 테스트를 하려고 웹뷰로 HTTP를 이용하는 앱을 APK로 빌드하고 실행했는데, 다음과 같은 에러가 발생했습니다.
 
