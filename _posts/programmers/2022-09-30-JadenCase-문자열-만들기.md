@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "[프로그래머스] JadenCase 문자열 만들기 - JavaScript"
-tags: [JAVASCRIPT, PROGRAMMERS, LV2]
-category: ['프로그래머스']
+tags: [JAVASCRIPT, PROGRAMMERS, CODINGTEST, LV2]
+category: ["프로그래머스"]
 ---
 
 ##### 문제 출처
