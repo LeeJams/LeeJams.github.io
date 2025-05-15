@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[React/Next.js] Presentation / Container 패턴"
-tags: [React, Next.js, Presentation, Container, Component]
+tags: [React, Next.js, Presentation, Container, Component, 구조, 패턴]
 category: ["REACT"]
 ---
 
