@@ -90,5 +90,6 @@ Expo 프로젝트에서는 플러그인 설정으로 ProGuard를 활성화하고
 
 - [카카오 개발자 문서](https://developers.kakao.com/docs/latest/ko/android/getting-started#project-pro-guard)
 - [디벨토크 사례](https://devtalk.kakao.com/t/react-native-android/142981)
+- [react-native-kakao 공식 문서](https://rnkakao.dev/en/docs/install-android)
 
 ---
