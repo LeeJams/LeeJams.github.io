@@ -1,7 +1,7 @@
 # Site settings
 title: LeeJam's Coding # site title
 description: >- # site description
-  개발자 리잼의 우당탕탕 개발이야기 💻
+  리잼의 개발이야기 💻
 lang: ko # default lang
 timezone: Asia/Seoul # set your timezone
 #https://developers.facebook.com/tools/debug/sharing/batch/, https://developers.kakao.com/tool/clear/og 무효화 시켜야 이미지 갱신 됨
@@ -13,7 +13,7 @@ mode: dark # default theme "dark" | "light"
 author:
   name: LeeJam # author name
   bio: >- # tell to the world
-    개발자 리잼의 우당탕탕 개발이야기 💻
+    리잼의 개발이야기 💻
   username: LeeJam # general username
   # username2: DongUk # general username
   github: LeeJams # github username
