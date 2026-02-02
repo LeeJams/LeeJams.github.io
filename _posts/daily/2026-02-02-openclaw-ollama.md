@@ -7,7 +7,7 @@ category: ["DAILY"]
 
 ## 도입
 
-[지난 글](/daily/2026-02-01-openclaw/)에서는 OpenClaw 설치와 기본 세팅, 텔레그램 연동, 그리고 X(트위터) 권한 위임까지 다뤘다.  
+[지난 글 (openclaw 설치 그리고 X(트위터) 권한 위임 후기)](/daily/openclaw/)에서는 OpenClaw 설치와 기본 세팅, 텔레그램 연동, 그리고 X(트위터) 권한 위임까지 다뤘다.  
 그때는 Google Gemini를 기본 LLM으로 사용했는데, 클라우드 API를 쓰다 보니 사용량 제한이나 비용이 신경 쓰일 수 있다.
 
 그래서 이번에는 **Ollama**를 활용해서 완전히 로컬에서 돌아가는 AI 모델을 OpenClaw에 연동하는 방법을 정리해보려 한다.  
@@ -124,7 +124,7 @@ ollama pull glm-4.7:cloud
 
 ## OpenClaw와 Ollama 연동
 
-OpenClaw 기본 설치와 세팅은 [이전 글](/daily/2026-02-01-openclaw/)을 참고하면 된다.  
+OpenClaw 기본 설치와 세팅은 [이전 글](/daily/openclaw/)을 참고하면 된다.  
 여기서는 Ollama 연동 부분만 다룬다.
 
 ### 빠른 설정
@@ -162,7 +162,7 @@ ollama launch openclaw --model qwen3-coder
 
 - [Ollama Quickstart](https://docs.ollama.com/quickstart)
 - [Ollama + OpenClaw 연동 문서](https://docs.ollama.com/integrations/openclaw)
-- [OpenClaw 기본 설치 및 세팅 (이전 글)](/daily/2026-02-01-openclaw/)
+- [OpenClaw 기본 설치 및 세팅 (이전 글)](/daily/openclaw/)
 
 로컬 LLM의 장점은 한 번 세팅해두면 비용 걱정 없이 마음껏 쓸 수 있다는 점이다.  
 물론 클라우드 모델(Gemini, Claude 등)에 비하면 성능 차이가 있을 수 있지만, 간단한 작업이나 프라이버시가 중요한 경우에는 충분히 좋은 선택이다.
