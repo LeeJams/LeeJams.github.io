@@ -7,7 +7,7 @@ category: ["DAILY"]
 
 ## 도입
 
-[지난 글 (openclaw 설치 그리고 X(트위터) 권한 위임 후기)](/daily/openclaw/)에서는 OpenClaw 설치와 기본 세팅, 텔레그램 연동, 그리고 X(트위터) 권한 위임까지 다뤘다.  
+[지난 글 (openclaw 설치 그리고 X(트위터) 권한 위임 후기)](https://leejams.github.io/openclaw/)에서는 OpenClaw 설치와 기본 세팅, 텔레그램 연동, 그리고 X(트위터) 권한 위임까지 다뤘다.  
 그때는 Google Gemini를 기본 LLM으로 사용했는데, 클라우드 API를 쓰다 보니 사용량 제한이나 비용이 신경 쓰일 수 있다.
 
 그래서 이번에는 **Ollama**를 활용해서 완전히 로컬에서 돌아가는 AI 모델을 OpenClaw에 연동하는 방법을 정리해보려 한다.  
