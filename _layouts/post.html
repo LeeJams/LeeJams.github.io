@@ -96,6 +96,16 @@ layout: compress
 
     {% include footer.html %}
   </div>
+
+  {% if page.mermaid %}
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'dark'
+    });
+  </script>
+  {% endif %}
 </body>
 
 </html>
