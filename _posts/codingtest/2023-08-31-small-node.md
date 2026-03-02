@@ -2,7 +2,7 @@
 layout: post
 title: "[구름톤 챌린지] 14일차 미션 작은 노드 - JavaScript"
 tags: [JAVASCRIPT, GOORM, CODINGTEST, 구름톤, 구름톤챌린지]
-category: ["구름톤챌린지"]
+category: ["구름"]
 ---
 
 ##### 문제 출처

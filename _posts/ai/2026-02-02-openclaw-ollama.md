@@ -2,7 +2,7 @@
 layout: post
 title: "Ollama로 OpenClaw 로컬 AI 모델 연동하기"
 tags: [openclaw, ollama, 로컬 LLM, AI 에이전트, qwen3-coder, glm-4.7]
-category: ["DAILY"]
+category: ["AI"]
 ---
 
 ## 도입

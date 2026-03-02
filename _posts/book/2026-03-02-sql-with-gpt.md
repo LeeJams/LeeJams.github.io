@@ -13,7 +13,7 @@ tags:
     튜닝,
     퀵스타트 SQL with 챗GPT,
   ]
-category: ["DAILY"]
+category: ["BOOK"]
 ---
 
 **"한빛미디어 서평단 \<나는리뷰어다\> 활동을 위해서 책을 협찬 받아 작성된 서평입니다."**

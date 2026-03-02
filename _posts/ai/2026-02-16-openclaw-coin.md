@@ -2,7 +2,7 @@
 layout: post
 title: "OpenClaw로 코인 자동매매 봇 만들기 — AI가 전략을 세우고, 봇이 실행한다"
 tags: [openclaw, 코인, 자동매매, 빗썸, Bithumb, AI 에이전트, Node.js, 트레이딩]
-category: ["DAILY"]
+category: ["AI"]
 mermaid: true
 ---
 

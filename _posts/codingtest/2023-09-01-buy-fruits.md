@@ -2,7 +2,7 @@
 layout: post
 title: "[구름톤 챌린지] 15일차 미션 과일 구매 - JavaScript"
 tags: [JAVASCRIPT, GOORM, CODINGTEST, 구름톤, 구름톤챌린지]
-category: ["구름톤챌린지"]
+category: ["구름"]
 ---
 
 ##### 문제 출처
