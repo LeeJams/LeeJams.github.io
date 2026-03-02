@@ -1,7 +1,18 @@
 ---
 layout: post
 title: "퀵스타트 SQL with 챗GPT - AI 시대, SQL은 이렇게 배워야 한다"
-tags: [BOOK, REVIEW, 한빛미디어, 나는리뷰어다, SQL, ChatGPT, 인덱스, 튜닝]
+tags:
+  [
+    BOOK,
+    REVIEW,
+    한빛미디어,
+    나는리뷰어다,
+    SQL,
+    ChatGPT,
+    인덱스,
+    튜닝,
+    퀵스타트 SQL with 챗GPT,
+  ]
 category: ["DAILY"]
 ---
 
