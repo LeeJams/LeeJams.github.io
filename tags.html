@@ -12,14 +12,15 @@ excerpt: Sorted article by category.
   {%- endfor -%}
 </div> -->
 
+{% assign sorted_categories = site.categories | sort %}
 <div class="archive-tags">
-  {%- for tag in site.categories -%}
+  {%- for tag in sorted_categories -%}
   {% capture name %}{{ tag | first }}{% endcapture %}
   <a class="tag tag-item" href="#{{name}}" data-tag="{{name}}">{{ name }}</a>
   {%- endfor -%}
 </div>
 
-{%- for tag in site.categories -%}
+{%- for tag in sorted_categories -%}
   {%- capture name -%}{{ tag | first }}{%- endcapture -%}
   {%- for post in site.categories[name] -%}
   <article class="post-item hidden" id="results-container" data-{{name}}>
