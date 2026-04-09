@@ -52,7 +52,7 @@ main 에이전트에 설정해둔 모델, 인증, 성격(시스템 프롬프트)
 
 아래는 `coding` 에이전트를 추가하면서 OpenAI Codex OAuth로 설정한 화면이다.
 
-![에이전트 추가 세팅](../../assets/img/ai/multi-setting.png)
+<img src="/assets/img/ai/multi-setting.png" alt="에이전트 추가 세팅" />
 
 **4. 채널 설정**
 
@@ -108,7 +108,7 @@ openclaw agent --agent coding --message "안녕"
 
 게이트웨이 웹 UI(`http://127.0.0.1:18789/`)에 접속하면, 에이전트별로 채팅 채널이 나뉘어 있다.
 
-![멀티 에이전트 UI](../../assets/img/ai/multi-ui.png)
+<img src="/assets/img/ai/multi-ui.png" alt="멀티 에이전트 UI" />
 
 왼쪽 사이드바에 `coding / main`, `coin / main` 처럼 에이전트가 쭉 나열되고, 각각 다른 모델을 붙여놓은 것도 한눈에 보인다.  
 에이전트마다 워크스페이스가 분리되어 있어서, 코딩 에이전트가 코인 매매 파일을 건드린다거나 하는 불상사는 없다.
