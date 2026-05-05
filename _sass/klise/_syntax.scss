@@ -183,3 +183,118 @@ pre.highlight, pre {
 .highlight .ss {
   color: #83a598;
 }
+
+// Light mode override (GitHub light palette - deeper tones)
+body:not([data-theme="dark"]) {
+  pre.highlight,
+  pre {
+    background-color: #f0f2f5;
+    border-color: rgba(0, 0, 0, 0.12);
+  }
+
+  code.highlighter-rouge {
+    background-color: #f0f2f5;
+    color: #1a0e0e;
+  }
+
+  .highlight,
+  .highlight .w {
+    color: #1a0e0e;
+  }
+
+  .highlight .err {
+    color: #9a0d18;
+    font-weight: bold;
+  }
+
+  .highlight .c,
+  .highlight .cd,
+  .highlight .cm,
+  .highlight .c1,
+  .highlight .cs {
+    color: #4d5560;
+  }
+
+  .highlight .cp {
+    color: #5a1ec0;
+  }
+
+  .highlight .nt {
+    color: #033d8b;
+  }
+
+  .highlight .o,
+  .highlight .ow,
+  .highlight .p,
+  .highlight .pi {
+    color: #1a0e0e;
+  }
+
+  .highlight .gi {
+    color: #105823;
+    background-color: #c9f4d4;
+  }
+
+  .highlight .gd {
+    color: #9a0d18;
+    background-color: #fad8d8;
+  }
+
+  .highlight .gh {
+    color: #033d8b;
+    font-weight: bold;
+  }
+
+  .highlight .k,
+  .highlight .kn,
+  .highlight .kp,
+  .highlight .kr,
+  .highlight .kv,
+  .highlight .kd {
+    color: #9a0d18;
+  }
+
+  .highlight .kc,
+  .highlight .no,
+  .highlight .ss {
+    color: #033d8b;
+  }
+
+  .highlight .kt,
+  .highlight .nn,
+  .highlight .nc {
+    color: #6a2300;
+  }
+
+  .highlight .s,
+  .highlight .sb,
+  .highlight .sc,
+  .highlight .sd,
+  .highlight .s2,
+  .highlight .sh,
+  .highlight .sx,
+  .highlight .s1,
+  .highlight .si,
+  .highlight .sr {
+    color: #03204b;
+  }
+
+  .highlight .se {
+    color: #9a0d18;
+  }
+
+  .highlight .na {
+    color: #5a1ec0;
+  }
+
+  .highlight .m,
+  .highlight .mf,
+  .highlight .mh,
+  .highlight .mi,
+  .highlight .il,
+  .highlight .mo,
+  .highlight .mb,
+  .highlight .mx {
+    color: #033d8b;
+  }
+}
