@@ -2,7 +2,7 @@
 layout: post
 title: "React Router useNavigate() 파라미터 전달 및 가져오는 방법 feat. useLocation()"
 tags: [React, ReactRouter, param, state, useNavigate, useLocation]
-category: ["REACT"]
+category: ["FRONT"]
 ---
 
 ### useNavigate()

@@ -2,7 +2,7 @@
 layout: post
 title: "React Router <Outlet> 컴포넌트에 props 전달하는 방법 [useOutletContext()]"
 tags: [React, ReactRouter, Outlet, useOutletContext]
-category: ["REACT"]
+category: ["FRONT"]
 ---
 
 React 개발 중 라우터 children 컴포넌트들의 상태 값을 한번에 관리하는 방법을 고민하던 중, **useOutletContext()**를 발견했다. React Hook의 useContext()로도 관리할 수 있지만 React Router **&lt;Outlet />**에 내장되어 제공하는 기능으로 편하게 사용 가능했다.
