@@ -2,7 +2,7 @@
 layout: post
 title: "Server-Side Rendering(SSR) / Client-Side Rendering(CSR)"
 tags: [SSR, CSR, Rendering, WEB]
-category: ["WEB"]
+category: ["FRONT"]
 ---
 
 ### Rendering and SSR / CSR

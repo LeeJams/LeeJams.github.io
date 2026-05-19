@@ -20,17 +20,115 @@ comments: false
 
 <ul id="search-results"></ul>
 
+{%- assign category_pool = "" | split: "," -%}
+{%- for post in site.posts -%}
+  {%- unless post.tags contains "CODINGTEST" -%}
+    {%- assign category_pool = category_pool | concat: post.categories -%}
+  {%- endunless -%}
+{%- endfor -%}
+{%- assign archive_categories = category_pool | uniq | sort -%}
+
+<button class="archive-trigger" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="archive-categories">
+  <span class="archive-trigger-label">전체</span>
+  <svg class="archive-trigger-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</button>
+
+<div id="archive-categories" class="archive-tags" role="dialog" aria-label="카테고리 선택" aria-modal="true">
+  <button class="archive-tags-close" type="button" aria-label="닫기">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+  </button>
+  <a class="tag tag-item selected" data-category="ALL">전체</a>
+  {%- for name in archive_categories -%}
+  <a class="tag tag-item" data-category="{{ name }}">{{ name }}</a>
+  {%- endfor -%}
+</div>
+
 {%- for post in site.posts -%}
 {%- unless post.tags contains "CODINGTEST" -%}
 {%- capture current_year -%}{{ post.date | date: "%Y" }}{%- endcapture -%}
 {%- unless current_year == previous_year -%}
-<h2>{{ current_year }}</h2>
+<h2 class="archive-year" data-year="{{ current_year }}">{{ current_year }}</h2>
 {%- assign previous_year = current_year -%}
 {%- endunless -%}
-<article class="post-item">
+{%- assign post_categories = post.categories | join: " " -%}
+<article class="post-item" data-categories="{{ post_categories }}">
   <h3 class="post-item-title">
     <a href="{{ post.url }}">{{ post.title | escape }}</a>
   </h3>
 </article>
 {%- endunless -%}
 {%- endfor -%}
+
+<script>
+(function () {
+  var modal = document.getElementById('archive-categories');
+  var trigger = document.querySelector('.archive-trigger');
+  var triggerLabel = document.querySelector('.archive-trigger-label');
+  var closeBtn = document.querySelector('.archive-tags-close');
+  var tagButtons = modal.querySelectorAll('.tag-item');
+  var posts = document.querySelectorAll('.post-item[data-categories]');
+  var yearHeaders = document.querySelectorAll('.archive-year');
+
+  function openModal() {
+    modal.classList.add('open');
+    document.body.classList.add('modal-open');
+    trigger.setAttribute('aria-expanded', 'true');
+  }
+
+  function closeModal() {
+    modal.classList.remove('open');
+    document.body.classList.remove('modal-open');
+    trigger.setAttribute('aria-expanded', 'false');
+  }
+
+  function applyFilter(category) {
+    posts.forEach(function (post) {
+      var cats = (post.dataset.categories || '').split(/\s+/);
+      var visible = category === 'ALL' || cats.indexOf(category) !== -1;
+      post.classList.toggle('hidden', !visible);
+    });
+
+    yearHeaders.forEach(function (header) {
+      var sibling = header.nextElementSibling;
+      var hasVisible = false;
+      while (sibling && !sibling.classList.contains('archive-year')) {
+        if (
+          sibling.classList.contains('post-item') &&
+          !sibling.classList.contains('hidden')
+        ) {
+          hasVisible = true;
+          break;
+        }
+        sibling = sibling.nextElementSibling;
+      }
+      header.classList.toggle('hidden', !hasVisible);
+    });
+
+    var label = 'ALL';
+    tagButtons.forEach(function (btn) {
+      var match = btn.dataset.category === category;
+      btn.classList.toggle('selected', match);
+      if (match) label = btn.textContent.trim();
+    });
+    if (triggerLabel) triggerLabel.textContent = label;
+  }
+
+  tagButtons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      applyFilter(btn.dataset.category);
+      closeModal();
+    });
+  });
+
+  if (trigger) trigger.addEventListener('click', openModal);
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+  });
+
+  try {
+    var hash = decodeURIComponent((location.hash || '').slice(1));
+    if (hash) applyFilter(hash);
+  } catch (e) {}
+})();
+</script>

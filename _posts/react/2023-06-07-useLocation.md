@@ -2,7 +2,7 @@
 layout: post
 title: "React Router 현재 경로 path 가져오기 [useLocation()]"
 tags: [React, ReactRouter, path, useLocation]
-category: ["REACT"]
+category: ["FRONT"]
 ---
 
 <center>

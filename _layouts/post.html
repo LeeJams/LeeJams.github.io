@@ -79,11 +79,38 @@ layout: compress
       <!-- {% if page.comments %}
       {% include comments.html %}
       {% endif %} -->
-      <div>
-        <script src="https://utteranc.es/client.js" repo="LeeJams/LeeJams.github.io" issue-term="pathname"
-          theme="github-dark" crossorigin="anonymous" async>
-          </script>
-      </div>
+      <div id="utterances-container"></div>
+      <script>
+        (function () {
+          function utterancesTheme() {
+            return document.body.getAttribute('data-theme') === 'dark'
+              ? 'github-dark'
+              : 'github-light';
+          }
+
+          var script = document.createElement('script');
+          script.src = 'https://utteranc.es/client.js';
+          script.async = true;
+          script.crossOrigin = 'anonymous';
+          script.setAttribute('repo', 'LeeJams/LeeJams.github.io');
+          script.setAttribute('issue-term', 'pathname');
+          script.setAttribute('theme', utterancesTheme());
+          document.getElementById('utterances-container').appendChild(script);
+
+          var observer = new MutationObserver(function () {
+            var iframe = document.querySelector('.utterances-frame');
+            if (!iframe) return;
+            iframe.contentWindow.postMessage(
+              { type: 'set-theme', theme: utterancesTheme() },
+              'https://utteranc.es'
+            );
+          });
+          observer.observe(document.body, {
+            attributes: true,
+            attributeFilter: ['data-theme'],
+          });
+        })();
+      </script>
 
     </main>
 

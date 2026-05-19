@@ -244,8 +244,12 @@ body[data-theme="dark"] {
       }
     }
   }
-}
 
-.selected {
-  background-color: #401b1b !important;
+  .archive-tags.open {
+    background-color: $dark-black;
+  }
+
+  .selected {
+    background-color: #401b1b !important;
+  }
 }

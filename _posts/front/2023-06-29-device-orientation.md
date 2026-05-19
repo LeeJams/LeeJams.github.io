@@ -2,7 +2,7 @@
 layout: post
 title: "Device Orientation Event를 이용해 걸음 수 측정하기"
 tags: [DeviceOrientationEvnet, NUMBER_OF_STEPS]
-category: ["WEB"]
+category: ["FRONT"]
 ---
 
 이번에 새싹톤에 참가해서 플로깅 서비스를 만들었습니다. 걸음수 측정을 위해 Device Orientation Event를 사용했는데 사용 방법을 정리해보았습니다. <br />

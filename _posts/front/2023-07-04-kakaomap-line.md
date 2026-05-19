@@ -2,7 +2,7 @@
 layout: post
 title: "카카오맵 API와 Geolocation API을 이용하여 실시간 동선 그리기 feat. React"
 tags: [KAKAOMAP, MAP, LINE, REALTIME, GEOLOCATION, REACT]
-category: ["WEB"]
+category: ["FRONT"]
 ---
 
 새싹톤에서 플로깅 서비스 만들면서 지나온 경로를 실시간으로 보여주고 싶어 Geolocation API와 카카오맵 API를 사용해 현재 내가 움직이는 경로를 지도에 실시간으로 그리는 기능을 구현했습니다.
@@ -26,7 +26,7 @@ if (navigator.geolocation) {
     },
     (error) => {
       // 위치 정보를 가져오는데 실패한 경우`
-    }
+    },
   );
 } else {
   // Geolocation API를 사용할 수 없는 경우
@@ -105,7 +105,7 @@ const successHandler = (position) => {
     mapOption = {
       center: new kakao.maps.LatLng(
         position.coords.latitude, // 현재 위치 기반 위도
-        position.coords.longitude // 현재 위치 기반 경도
+        position.coords.longitude, // 현재 위치 기반 경도
       ), // 지도의 중심좌표
       level: 3, // 지도의 확대 레벨
     };
@@ -152,14 +152,14 @@ const makeLine = useCallback(
     // 지도에 선을 표시합니다
     polyline.setMap(map);
   },
-  [map]
+  [map],
 );
 
 // 라인을 그리기 위한 좌표 배열을 만들어주는 함수
 const setLinePathArr = (position) => {
   const moveLatLon = new kakao.maps.LatLng(
     position.coords.latitude,
-    position.coords.longitude
+    position.coords.longitude,
   );
   const newPosition = positionArr.concat(moveLatLon);
   setPositionArr(newPosition);
