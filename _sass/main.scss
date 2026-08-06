@@ -1,6 +1,10 @@
 // Fonts preferences
-$sans-family: Roboto, sans-serif;
-$mono-family: Consolas, monospace;
+// 한글 글리프가 없는 Roboto 단독 지정은 OS별 폴백(맑은고딕/애플SD산돌고딕/NotoSansKR)을
+// 유발해 자간·행간이 기기마다 달라진다. Pretendard를 1순위로 두어 렌더링을 통일한다.
+$sans-family: "Pretendard Variable", Pretendard, -apple-system,
+  BlinkMacSystemFont, "Apple SD Gothic Neo", Roboto, "Noto Sans KR",
+  "Malgun Gothic", sans-serif;
+$mono-family: "JetBrains Mono", "D2Coding", Consolas, monospace;
 $base-font-size: 16px;
 $medium-font-size: $base-font-size * 0.938;
 $small-font-size: $base-font-size * 0.875;

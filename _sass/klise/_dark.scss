@@ -38,8 +38,9 @@ body[data-theme="dark"] {
       }
     }
 
-    h3 {
-      border-color: $dark-light;
+    // h3의 구분선은 라이트/다크 모두 제거했다. (h2와의 위계 역전 방지)
+    figcaption {
+      color: $dark-gray;
     }
     h1,
     h2,
@@ -110,8 +111,9 @@ body[data-theme="dark"] {
 
   // Blockquote
   blockquote {
-    color: #bb4177;
-    border-color: $dark-light;
+    // 기존 #bb4177은 본문 대비가 낮았다. 라이트 모드와 같이 본문 대비를 유지한다.
+    color: $dark-text-base-color;
+    border-color: $dark-smoke;
   }
 
   // Strong, Bold

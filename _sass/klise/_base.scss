@@ -84,9 +84,11 @@ b {
 
 // horizontal rule
 hr {
-  border-bottom: 0;
-  border-style: solid;
-  border-color: $light;
+  height: 0;
+  border: 0;
+  border-top: 1px solid $light;
+  // 섹션 구분선은 앞뒤로 충분히 떨어져야 '분리' 신호로 읽힌다.
+  margin: 56px 0;
 }
 
 // kbd tag
@@ -177,8 +179,9 @@ ol {
 }
 
 li {
-  padding-bottom: 1px;
-  padding-top: 1px;
+  // 항목 사이가 1px이면 불릿 목록이 한 덩어리로 뭉쳐 보인다.
+  padding-bottom: 4px;
+  padding-top: 4px;
 
   &:before {
     color: $black;
@@ -253,19 +256,27 @@ em {
 
 // Blockquotes
 blockquote {
-  color: $gray;
-  font-style: italic;
-  opacity: 0.9;
-  border-top: 1px solid $light;
-  border-bottom: 1px solid $light;
-  padding: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
+  // 한글 이탤릭은 가짜 기울임으로 렌더링되어 자획이 뭉갠다.
+  font-style: normal;
+  // 인용문은 대개 글의 한 줄 요약이므로 본문과 같은 대비를 유지한다.
+  color: $text-base-color;
+  opacity: 1;
+  border-top: 0;
+  border-bottom: 0;
+  border-left: 3px solid $smoke;
+  padding: 4px 0 4px 20px;
+  margin: 32px 0; // 8 x 4
   font-size: 1em;
 
   > :last-child {
     margin-bottom: 0;
     margin-top: 0;
+  }
+
+  // .page-content > p 의 상하 패딩이 인용문 안에서는 과해 보인다.
+  > p {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
   }
 }
 
@@ -321,8 +332,11 @@ sup {
 table {
   width: 100%;
   margin-top: $spacing-half;
+  margin-bottom: $spacing-half;
   border-collapse: collapse;
-  font-size: $small-font-size;
+  // 표는 대개 글의 결론을 압축한 블록이다. 너무 작으면 가장 중요한 내용이 가장 안 읽힌다.
+  font-size: $medium-font-size;
+  line-height: 1.6;
 
   thead {
     font-weight: $bold-weight;
@@ -334,7 +348,25 @@ table {
   td,
   tr {
     border: 1px solid $light;
-    padding: 2px 7px;
+    // 기존 2px 상하 패딩은 셀 내용이 테두리에 붙어 답답했다.
+    padding: 10px 14px;
+    vertical-align: top;
+  }
+
+  thead th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+  }
+
+  @include media-query($on-mobile) {
+    font-size: $small-font-size;
+
+    th,
+    td,
+    tr {
+      padding: 8px 10px;
+    }
   }
 }
 
