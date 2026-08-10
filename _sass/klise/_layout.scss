@@ -263,10 +263,13 @@
   }
 
   .post-item-date {
-    min-width: 96px;
+    box-sizing: border-box;
+    flex: 0 0 114px;
+    min-width: 0;
     color: $black;
     font-weight: 700;
     padding-right: 10px;
+    white-space: nowrap;
 
     @include media-query($on-mobile) {
       font-size: 16px;
@@ -274,12 +277,16 @@
   }
 
   .post-item-title {
+    flex: 1;
+    min-width: 0;
     margin: 0;
     border: 0;
     padding: 0;
     font-size: $base-font-size;
     font-weight: normal;
     letter-spacing: 0.1px;
+    word-break: keep-all;
+    overflow-wrap: break-word;
 
     a {
       color: $text-base-color;
