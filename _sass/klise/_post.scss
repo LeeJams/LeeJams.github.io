@@ -155,6 +155,31 @@ body.lightbox-open {
   overflow-wrap: break-word;
   letter-spacing: -0.003em;
 
+  // 게시글 전체에 로컬 나눔고딕을 사용한다.
+  &[itemprop="articleBody"] {
+    font-family: $post-family;
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: -0.01em;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    figcaption,
+    table {
+      font-family: $sans-family;
+    }
+
+    strong,
+    b {
+      font-family: $post-family;
+      font-weight: 800;
+    }
+  }
+
   iframe {
     text-align: center;
   }
@@ -256,7 +281,7 @@ body.lightbox-open {
     }
   }
 
-  // 본문 16px 기준 타입 스케일.
+  // 제목은 기존 16px 기준 타입 스케일을 유지한다.
   // 여백은 8의 배수로 맞추고, 항상 "위 여백 > 아래 여백"이 되게 해
   // 제목이 아래 본문과 한 덩어리로 묶이도록 한다.
   h1 {
@@ -400,5 +425,5 @@ body.lightbox-open {
 }
 
 .post-updated-at {
-  font-family: "Ubuntu mono", "monospace";
+  font-family: $sans-family;
 }

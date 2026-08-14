@@ -49,14 +49,14 @@ layout: compress
           {% if page.date %}
           <div class="post-meta">
             <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-              {{ page.date | date: "%b %d, %Y" }}
+              {{ page.date | date: "%Y-%m-%d" }}
             </time>
             <span itemprop="author" itemscope itemtype="https://schema.org/Person">
               <span itemprop="name">{% if page.author %}{{ page.author }}{% else %}{{ site.author.name }}{% endif
                 %}</span>
             </span>
             <time hidden datetime="{{ page.modified | date_to_xmlschema }}" itemprop="dateModified">
-              {{ page.date | date: "%b %d, %Y" }}
+              {{ page.modified | date: "%Y-%m-%d" }}
             </time>
             <span hidden itemprop="publisher" itemtype="Person">{% if page.author %}{{ page.author }}{% else %}{{
               site.author.name }}{% endif %}</span>
@@ -82,11 +82,38 @@ layout: compress
       <div id="utterances-container"></div>
       <script>
         (function () {
+          var container = document.getElementById('utterances-container');
+
           function utterancesTheme() {
             return document.body.getAttribute('data-theme') === 'dark'
               ? 'github-dark'
               : 'github-light';
           }
+
+          function syncUtterancesTheme() {
+            var iframe = container.querySelector('.utterances-frame');
+            if (!iframe || iframe.contentDocument) return;
+            iframe.contentWindow.postMessage(
+              { type: 'set-theme', theme: utterancesTheme() },
+              'https://utteranc.es'
+            );
+          }
+
+          function connectUtterancesFrame() {
+            var iframe = container.querySelector('.utterances-frame');
+            if (!iframe || iframe.dataset.themeSyncAttached) return;
+            iframe.dataset.themeSyncAttached = 'true';
+            iframe.addEventListener('load', syncUtterancesTheme);
+          }
+
+          var frameObserver = new MutationObserver(connectUtterancesFrame);
+          frameObserver.observe(container, { childList: true, subtree: true });
+
+          var themeObserver = new MutationObserver(syncUtterancesTheme);
+          themeObserver.observe(document.body, {
+            attributes: true,
+            attributeFilter: ['data-theme'],
+          });
 
           var script = document.createElement('script');
           script.src = 'https://utteranc.es/client.js';
@@ -95,27 +122,14 @@ layout: compress
           script.setAttribute('repo', 'LeeJams/LeeJams.github.io');
           script.setAttribute('issue-term', 'pathname');
           script.setAttribute('theme', utterancesTheme());
-          document.getElementById('utterances-container').appendChild(script);
-
-          var observer = new MutationObserver(function () {
-            var iframe = document.querySelector('.utterances-frame');
-            if (!iframe) return;
-            iframe.contentWindow.postMessage(
-              { type: 'set-theme', theme: utterancesTheme() },
-              'https://utteranc.es'
-            );
-          });
-          observer.observe(document.body, {
-            attributes: true,
-            attributeFilter: ['data-theme'],
-          });
+          container.appendChild(script);
         })();
       </script>
 
     </main>
 
     {% if page.modified %}
-    <small class="post-updated-at">updated_at {{page.modified | date: "%d-%m-%Y"}}</small>
+    <small class="post-updated-at">수정일 {{ page.modified | date: "%Y-%m-%d" }}</small>
     {% endif %}
     {% if page.next or page.previous %}
     {% include navigation.html %}

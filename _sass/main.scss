@@ -1,9 +1,8 @@
 // Fonts preferences
-// 한글 글리프가 없는 Roboto 단독 지정은 OS별 폴백(맑은고딕/애플SD산돌고딕/NotoSansKR)을
-// 유발해 자간·행간이 기기마다 달라진다. Pretendard를 1순위로 두어 렌더링을 통일한다.
-$sans-family: "Pretendard Variable", Pretendard, -apple-system,
-  BlinkMacSystemFont, "Apple SD Gothic Neo", Roboto, "Noto Sans KR",
+// 한글과 영문 모두 동일한 로컬 나눔고딕 파일을 사용해 화면별 차이를 줄인다.
+$sans-family: "Nanum Gothic Blog", "Nanum Gothic", "Noto Sans KR",
   "Malgun Gothic", sans-serif;
+$post-family: $sans-family;
 $mono-family: "JetBrains Mono", "D2Coding", Consolas, monospace;
 $base-font-size: 16px;
 $medium-font-size: $base-font-size * 0.938;
@@ -20,6 +19,7 @@ $bold-weight: 700;
 $text-base-color: #434648;
 $text-link-blue: #003fff;
 $text-link-blue-active: #0036c7;
+$text-strong-color: #2450bd;
 
 $black: #0d122b;
 $light: #ececec;
@@ -31,6 +31,7 @@ $white: #fff;
 $dark-text-base-color: #c7bebe;
 $dark-text-link-blue: #ff5277;
 $dark-text-link-blue-active: #ff2957;
+$dark-text-strong-color: #c83c5b;
 
 $dark-black: #131418;
 $dark-white: #eaeaea;
@@ -64,4 +65,4 @@ $on-widescreen: 1152px;
 
 // Import sass files
 @import "klise/fonts", "klise/base", "klise/layout", "klise/post",
-  "klise/miscellaneous", "klise/syntax", "klise/dark";
+  "klise/miscellaneous", "klise/syntax", "klise/dark", "klise/profile";

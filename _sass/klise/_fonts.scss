@@ -1,5 +1,42 @@
 @charset "utf-8";
 
+// 나눔고딕의 실제 굵기를 모두 연결해 합성 볼드가 생기지 않도록 한다.
+@font-face {
+  font-family: "Nanum Gothic Blog";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local("NanumGothic Light"), local("Nanum Gothic Light"),
+    url("/assets/fonts/NanumGothic-Light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Nanum Gothic Blog";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("NanumGothic"), local("Nanum Gothic"),
+    url("/assets/fonts/NanumGothic-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Nanum Gothic Blog";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("NanumGothic Bold"), local("Nanum Gothic Bold"),
+    url("/assets/fonts/NanumGothic-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Nanum Gothic Blog";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: local("NanumGothic ExtraBold"), local("Nanum Gothic ExtraBold"),
+    url("/assets/fonts/NanumGothic-ExtraBold.woff2") format("woff2");
+}
+
 @font-face {
   font-family: "Roboto";
   font-style: normal;

@@ -264,12 +264,14 @@
 
   .post-item-date {
     box-sizing: border-box;
-    flex: 0 0 114px;
+    flex: 0 0 126px;
     min-width: 0;
     color: $black;
     font-weight: 700;
-    padding-right: 10px;
+    padding-right: 16px;
     white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum" 1;
 
     @include media-query($on-mobile) {
       font-size: 16px;
@@ -295,6 +297,26 @@
       &focus {
         color: $black;
       }
+    }
+  }
+}
+
+.post-item--dated {
+  display: grid;
+  grid-template-columns: 100px minmax(0, 1fr);
+  column-gap: 14px;
+  align-items: baseline;
+
+  .post-item-date {
+    padding-right: 0;
+  }
+
+  @include media-query($on-mobile) {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 2px;
+
+    .post-item-date {
+      font-size: $small-font-size;
     }
   }
 }
