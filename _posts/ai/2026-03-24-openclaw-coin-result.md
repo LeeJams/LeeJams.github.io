@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "OpenClaw 코인 봇 한 달 결과: 고점 10만원, 그리고 원상복구"
-tags: [openclaw, 코인, 자동매매, 빗썸, 회고, 실패, AI 에이전트]
+tags: [openclaw, 코인 자동매매, 자동매매 봇, 빗썸, AI 에이전트, 트레이딩 전략, 리스크 관리, 개발 회고]
 category: ["AI"]
 ---
 

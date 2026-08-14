@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "PostgreSQL의 UPDATE는 생각보다 비쌌다 — 단일 INSERT로 갈아탄 이야기"
-tags: [POSTGRESQL, DATABASE, MVCC, TOAST, WAL]
+tags: [POSTGRESQL, SQL 튜닝, UPDATE 성능, MVCC, DEAD TUPLE, TABLE BLOAT, AUTOVACUUM, TOAST, WAL]
 category: ["DB"]
 ---
 

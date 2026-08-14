@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "OMS의 쇼핑몰 API 변경 검토, Claude Cowork 스킬로 자동화하기"
-tags: [Claude Cowork, OMS, 업무 자동화, 스킬, 이커머스 연동]
+tags: [Claude Cowork, Claude Cowork Skill, OMS, 쇼핑몰 API, API 변경 모니터링, API 영향도 분석, 업무 자동화, 이커머스 연동]
 category: ["AI"]
 ---
 

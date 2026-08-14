@@ -7,11 +7,11 @@ tags:
     REVIEW,
     한빛미디어,
     나는리뷰어다,
-    생성형AI,
-    LLM,
-    에이전트,
-    RAG,
     그림으로 배우는 생성형 AI,
+    생성형 AI,
+    LLM,
+    AI 에이전트,
+    RAG,
   ]
 category: ["BOOK"]
 ---

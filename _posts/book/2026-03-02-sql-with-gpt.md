@@ -7,11 +7,11 @@ tags:
     REVIEW,
     한빛미디어,
     나는리뷰어다,
-    SQL,
-    ChatGPT,
-    인덱스,
-    튜닝,
     퀵스타트 SQL with 챗GPT,
+    ChatGPT,
+    SQL 튜닝,
+    데이터베이스 인덱스,
+    실행 계획,
   ]
 category: ["BOOK"]
 ---

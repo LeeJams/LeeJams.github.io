@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "OpenClaw 멀티 에이전트 — 한 놈한테 다 시키지 말자"
-tags: [openclaw, 멀티 에이전트, AI 에이전트, 텔레그램, OpenAI Codex]
+tags: [openclaw, OpenClaw Agents, 멀티 에이전트, AI 에이전트, 에이전트 역할 분리, 텔레그램 연동, OpenAI Codex]
 category: ["AI"]
 ---
 

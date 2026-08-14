@@ -6,12 +6,13 @@ tags:
   [
     POSTGRESQL,
     OMS,
-    ORDER MANAGEMENT SYSTEM,
-    SQL,
-    QUERY OPTIMIZATION,
-    PAGINATION,
-    OFFSET,
-    DATABASE PERFORMANCE,
+    주문 목록 조회,
+    SQL 튜닝,
+    쿼리 최적화,
+    2단계 페이징,
+    OFFSET 페이징,
+    EXPLAIN ANALYZE,
+    데이터베이스 성능,
   ]
 category: ["DB"]
 ---
