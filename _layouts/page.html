@@ -30,11 +30,17 @@ layout: compress
 
   {% include navbar.html %}
   <div class="wrapper">
+    {% unless page.body_class == 'profile-page-body' %}
     <header class="header">
       <h1 class="header-title center" itemprop="headline">{{ page.title | escape }}.</h1>
     </header>
+    {% endunless %}
     <main class="page-content" aria-label="Content">
+      {% if page.body_class == 'profile-page-body' %}
+      {{ content }}
+      {% else %}
       {% include anchor_headings.html html=content anchorClass="anchor-head" beforeHeading=true h_min=4 h_max=4 %}
+      {% endif %}
     </main>
     {% include footer.html %}
   </div>

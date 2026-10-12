@@ -1,0 +1,62 @@
+---
+layout: page
+---
+{% if page.group == 'company' %}
+{% assign projects_anchor = '#company-projects' %}
+{% assign projects_label = '회사 프로젝트' %}
+{% else %}
+{% assign projects_anchor = '#personal-projects' %}
+{% assign projects_label = '개인 프로젝트' %}
+{% endif %}
+<article class="profile-page profile-detail">
+  <header class="profile-detail__hero">
+    <p class="profile-eyebrow">{{ page.category | default: '프로젝트' | escape }}{% if page.organization %} · {{ page.organization | escape }}{% endif %}</p>
+    <h1>{{ page.title | escape }}</h1>
+    {% if page.summary %}<p class="profile-detail__summary">{{ page.summary | escape }}</p>{% endif %}
+    <dl class="profile-detail__meta">
+      {% if page.period %}<div><dt>기간</dt><dd>{{ page.period | escape }}</dd></div>{% endif %}
+      {% if page.role %}<div><dt>역할</dt><dd>{{ page.role | escape }}</dd></div>{% endif %}
+      {% if page.tech %}<div><dt>기술</dt><dd>{{ page.tech | join: ', ' | escape }}</dd></div>{% endif %}
+    </dl>
+    {% if page.links %}
+    <div class="profile-actions" aria-label="프로젝트 관련 링크">
+      {% for link in page.links %}
+      {% assign prefix = link.url | slice: 0, 4 %}
+      {% if prefix == 'http' %}<a href="{{ link.url | escape }}" target="_blank" rel="noopener">{{ link.label | escape }} <span aria-hidden="true">↗</span></a>{% else %}<a href="{{ link.url | relative_url }}">{{ link.label | escape }} <span aria-hidden="true">→</span></a>{% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+  </header>
+  {% if page.achievements and page.achievements.size > 0 %}
+  <section class="profile-detail__achievements" aria-labelledby="project-achievements-title">
+    <h2 id="project-achievements-title">주요 성과</h2>
+    <ul>
+      {% for achievement in page.achievements %}
+      <li><h3>{{ achievement.title | escape }}</h3><p>{{ achievement.detail | escape }}</p></li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% elsif page.highlight %}
+  <p class="profile-detail__highlight"><span>주요 성과</span>{{ page.highlight | escape }}</p>
+  {% endif %}
+  {% if page.related_posts %}
+  {% capture related_documents %}
+    {% for post_url in page.related_posts %}
+      {% assign related_post = site.posts | where: 'url', post_url | first %}
+      {% if related_post %}
+      <li><a href="{{ related_post.url | relative_url }}"><span>{{ related_post.title | escape }}</span><span aria-hidden="true">↗</span></a><time datetime="{{ related_post.date | date: '%Y-%m-%d' }}">{{ related_post.date | date: '%Y.%m.%d' }}</time></li>
+      {% endif %}
+    {% endfor %}
+  {% endcapture %}
+  {% assign related_documents = related_documents | strip %}
+  {% if related_documents != '' %}
+  <aside class="profile-detail__documents" aria-labelledby="project-documents-title">
+    <h2 id="project-documents-title">관련 문서</h2>
+    <ul>{{ related_documents }}</ul>
+  </aside>
+  {% endif %}
+  {% endif %}
+  {% if page.cover %}<figure class="profile-detail__cover"><img src="{{ page.cover | relative_url }}" alt="{{ page.cover_alt | default: page.title | escape }}" />{% if page.cover_caption %}<figcaption>{{ page.cover_caption | escape }}</figcaption>{% endif %}</figure>{% endif %}
+  <div class="profile-detail__content">{{ content }}</div>
+  <nav class="profile-detail__footer" aria-label="프로젝트 목록"><a href="{{ '/about/' | relative_url }}{{ projects_anchor }}">← {{ projects_label }} 목록으로 돌아가기</a></nav>
+</article>

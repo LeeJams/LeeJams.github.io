@@ -1,0 +1,17 @@
+<div class="profile-projects">
+  {% for project in include.projects %}
+  <article class="profile-project" data-project-category="{{ project.category | escape }}">
+    <a class="profile-project__link" href="{{ project.url | relative_url }}" aria-label="{{ project.title | escape }} 상세 보기">
+      <span class="profile-project__index" aria-hidden="true">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
+      <div class="profile-project__copy">
+        <p class="profile-project__meta">{{ project.category | default: '프로젝트' | escape }}{% if project.organization %} · {{ project.organization | escape }}{% endif %}{% if project.period %} <span>{{ project.period | escape }}</span>{% endif %}</p>
+        <h4>{{ project.title | escape }}</h4>
+        <p class="profile-project__summary">{{ project.summary | escape }}</p>
+        {% if project.highlight %}<p class="profile-project__highlight">{{ project.highlight | escape }}</p>{% endif %}
+        {% if project.tech %}<p class="profile-project__tech">{{ project.tech | join: ' / ' | escape }}</p>{% endif %}
+      </div>
+      <span class="profile-project__arrow" aria-hidden="true">↗</span>
+    </a>
+  </article>
+  {% endfor %}
+</div>

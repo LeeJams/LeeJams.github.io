@@ -165,8 +165,8 @@
         {%- assign menus = site.data.menus -%}
         {%- if menus %}
           {%- for menu in menus -%} 
-            {%- if url == menu.url -%}
-              <a class="menu-link active" href="{{ menu.url }}">{{ menu.title }}</a>
+            {%- if url == menu.url or page.collection == 'projects' and menu.url == '/about/' -%}
+              <a class="menu-link active" href="{{ menu.url | relative_url }}" aria-current="page">{{ menu.title }}</a>
             {%- else -%} 
               {%- if menu.external -%}
                 <a
@@ -177,7 +177,7 @@
                   >{{ menu.title }}</a
                 >
               {%- else -%}
-                <a class="menu-link" href="{{ menu.url }}">{{ menu.title }}</a>
+                <a class="menu-link" href="{{ menu.url | relative_url }}">{{ menu.title }}</a>
               {%- endif -%} 
             {%- endif -%} 
           {%- endfor -%}

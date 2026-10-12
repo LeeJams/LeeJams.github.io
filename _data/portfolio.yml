@@ -1,0 +1,64 @@
+name: 이재민
+role: Software Developer
+intro: 비즈니스의 맥락을 이해하고, 기술을 실제로 쓰이는 제품과 업무 개선으로 연결합니다. AI를 적극 활용하며 결과와 근거를 직접 검증합니다.
+linkedin: https://www.linkedin.com/in/%EC%9E%AC%EB%AF%BC-%EC%9D%B4-285370245/
+
+experience:
+  - company: 헥토데이터
+    period: 2025.08 - 현재
+    role: 커머스개발팀 · 선임
+    description: Sellpick OMS 백엔드 개발과 운영. 멀티 채널 주문 정합성, 조회 성능, 쇼핑몰 API 연동과 반복 업무 자동화를 다룹니다.
+  - company: 한화비전
+    period: 2024.05 - 2025.07
+    role: Keeper · 프론트엔드 개발
+    description: 출퇴근·스케줄·결재·급여·근로계약서 등 직원 관리 서비스의 프론트엔드를 개발했습니다.
+  - company: 엔더스
+    period: 2020.09 - 2024.04
+    role: 웹 서비스 · 풀스택 개발
+    description: 커머스 주문·결제, 백오피스, AEO 인증 관리, 공모전 플랫폼과 포인트 시스템을 개발했습니다.
+
+skills:
+  - area: Frontend
+    items: React, Next.js, Vue 3, TypeScript, JavaScript
+  - area: Backend
+    items: Java, Spring Boot, MyBatis, Node.js
+  - area: Data & Operations
+    items: PostgreSQL, Oracle, MariaDB, Redis, Elasticsearch, Kubernetes
+  - area: AI & Quality
+    items: Claude 기반 업무 자동화, MCP 연동, Vitest, Git
+
+certifications:
+  - name: SQLD (SQL 개발자)
+    issuer: 한국데이터산업진흥원
+    date: '2023.12'
+  - name: 정보처리기사
+    issuer: 한국산업인력공단
+    date: '2021.06'
+  - name: AWS Certified Cloud Practitioner
+    issuer: AWS
+    date: '2021.03'
+
+awards:
+  - name: 서울경제진흥원장상 (장려)
+    organizer: 2023 새싹톤 해커톤
+    date: '2023'
+    description: 팀 테크노마드의 리더·프론트엔드 개발자로 플로깅 어시스턴트 담깅을 기획하고 구현했습니다.
+    url: /about/projects/damging/
+  - name: 성적우수상
+    organizer: 아이티윌 · 디지털컨버전스 개발자 양성 과정
+    date: '2020'
+    description: 팀 리더로 채용 포털 사이트의 기획과 개발을 주도했습니다.
+
+education:
+  - name: 국가평생교육진흥원
+    detail: 컴퓨터공학 · 학사
+    period: 2025.02 - 2025.08
+  - name: 가톨릭관동대학교
+    detail: 관광경영학 · 학사
+    period: 2012.03 - 2019.02
+  - name: 빗썸 테크 아카데미
+    detail: 프론트엔드 심화 과정 · 빗썸, 코드스테이츠
+    period: 2022.04 - 2022.05
+  - name: 아이티윌
+    detail: Java & Python 디지털컨버전스 개발자 양성 과정
+    period: 2020.03 - 2020.08

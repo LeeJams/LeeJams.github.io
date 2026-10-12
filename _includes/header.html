@@ -68,6 +68,7 @@
     name="description"
     content="{{
       page.description
+        | default: page.summary
         | default: site.description
         | strip_html
         | normalize_whitespace
@@ -108,6 +109,7 @@
     property="og:description"
     content="{{
       page.description
+        | default: page.summary
         | default: site.description
         | strip_html
         | normalize_whitespace
@@ -137,6 +139,7 @@
     name="twitter:description"
     content="{{
       page.description
+        | default: page.summary
         | default: site.description
         | strip_html
         | normalize_whitespace

@@ -39,6 +39,9 @@ gtag: "G-N7CRZG79RN"
 collections:
   posts:
     output: true
+  projects:
+    output: true
+    permalink: /about/projects/:name/
 
 # Markdown settings
 markdown: kramdown
@@ -52,6 +55,14 @@ defaults:
       path: ""
     values:
       layout: post
+      comments: false
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+      body_class: profile-page-body
+      group: personal
       comments: false
 
 # Jekyll Compose default front matter
@@ -84,6 +95,7 @@ exclude:
   - LICENSE
   - CHANGELOG.md
   - README.md
+  - docs
   - node_modules
   - CODE_OF_CONDUCT.md
   - CONTRIBUTING.md
