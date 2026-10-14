@@ -304,6 +304,7 @@ body.profile-page-body {
   .profile-detail__content {
     margin-top: 36px;
     p { margin: 16px 0; line-height: 1.8; }
+    p code, li code { white-space: normal; overflow-wrap: anywhere; }
     h2 { margin: 40px 0 16px; font-size: var(--profile-size-heading); }
     > h2:first-child { margin-top: 0; }
     h3 { margin: 32px 0 12px; font-size: var(--profile-size-subheading); }
