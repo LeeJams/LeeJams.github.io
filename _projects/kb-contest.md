@@ -1,9 +1,9 @@
 ---
-title: 사내 공모전 플랫폼
-summary: "사내 공모전의 포인트 지급·차감·이력을 구현하고, 역할별 권한과 조회 성능을 개선했습니다."
+title: KB카드 공모전
+summary: "KB카드 공모전의 포인트 지급·차감·이력을 구현하고, 역할별 권한과 조회 성능을 개선했습니다."
 group: company
 category: 업무
-organization: 국민카드 · 엔더스
+organization: KB카드 · 엔더스
 period: 2022.10 - 2023.05
 role: 플랫폼 개발 · 포인트 도메인 담당
 order: 5
