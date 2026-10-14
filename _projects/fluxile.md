@@ -1,6 +1,6 @@
 ---
 title: Fluxile
-summary: "AI로 개발이 얼마나 쉬워졌는지 직접 실험하기 위해 iOS·Android 네이티브로 구현·출시한 헥사 블록 퍼즐입니다."
+summary: "AI를 개발에 활용하며 iOS·Android 네이티브로 구현·출시한 헥사 블록 퍼즐입니다."
 group: personal
 icon: /assets/img/projects/icons/fluxile.jpg
 category: 앱
