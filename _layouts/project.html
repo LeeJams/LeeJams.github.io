@@ -19,6 +19,7 @@ layout: page
     <dl class="profile-detail__meta">
       {% if page.period %}<div><dt>기간</dt><dd>{{ page.period | escape }}</dd></div>{% endif %}
       {% if page.role %}<div><dt>담당 범위</dt><dd>{{ page.role | escape }}</dd></div>{% endif %}
+      {% if page.team %}<div><dt>개발 방식</dt><dd>{{ page.team | escape }}{% if page.contribution %} · 기여도 {{ page.contribution | escape }}{% endif %}</dd></div>{% endif %}
       {% if page.tech %}<div><dt>기술</dt><dd>{{ page.tech | join: ', ' | escape }}</dd></div>{% endif %}
     </dl>
     {% if page.links %}

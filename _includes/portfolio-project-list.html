@@ -1,10 +1,22 @@
 <div class="profile-projects">
+  {% assign detail_index = 0 %}
   {% for project in include.projects %}
+  {% if project.listing_only %}
+  {% assign app_link = project.links | first %}
+  <article class="profile-project profile-project--compact" data-project-category="{{ project.category | escape }}">
+    {% if app_link %}<a class="profile-project__compact-link" href="{{ app_link.url | escape }}" target="_blank" rel="noopener" aria-label="{{ project.title | escape }} {{ app_link.label | escape }}에서 보기">{% else %}<div class="profile-project__compact-link">{% endif %}
+      {% if project.icon %}<span class="profile-project__icon" aria-hidden="true"><img src="{{ project.icon | relative_url }}" alt="" width="28" height="28" loading="lazy" decoding="async" /></span>{% endif %}
+      <h4>{{ project.title | escape }}</h4>
+      {% if app_link %}<span class="profile-project__compact-arrow" aria-hidden="true">↗</span>{% endif %}
+    {% if app_link %}</a>{% else %}</div>{% endif %}
+  </article>
+  {% else %}
+  {% assign detail_index = detail_index | plus: 1 %}
   <article class="profile-project" data-project-category="{{ project.category | escape }}">
     <a class="profile-project__link" href="{{ project.url | relative_url }}" aria-label="{{ project.title | escape }} 상세 보기">
-      <span class="profile-project__index" aria-hidden="true">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
+      <span class="profile-project__index" aria-hidden="true">{% if detail_index < 10 %}0{% endif %}{{ detail_index }}</span>
       <div class="profile-project__copy">
-        <p class="profile-project__meta">{{ project.category | default: '프로젝트' | escape }}{% if project.organization %} · {{ project.organization | escape }}{% endif %}{% if project.period %} <span>{{ project.period | escape }}</span>{% endif %}</p>
+        <p class="profile-project__meta">{{ project.category | default: '프로젝트' | escape }}{% if project.organization %} · {{ project.organization | escape }}{% endif %}{% if project.period %} <span>{{ project.period | escape }}</span>{% endif %}{% if project.team %}<span class="profile-project__ownership">{{ project.team | escape }}{% if project.contribution %} · 기여도 {{ project.contribution | escape }}{% endif %}</span>{% endif %}</p>
         <h4 class="profile-project__title">
           {% if project.group != 'company' %}
           <span class="profile-project__icon" aria-hidden="true">
@@ -26,5 +38,6 @@
       <span class="profile-project__arrow" aria-hidden="true">↗</span>
     </a>
   </article>
+  {% endif %}
   {% endfor %}
 </div>

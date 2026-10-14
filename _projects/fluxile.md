@@ -5,7 +5,9 @@ group: personal
 icon: /assets/img/projects/icons/fluxile.jpg
 category: 앱
 order: 9
-role: "기획·iOS/Android 개발·배포"
+role: "기획·디자인·iOS/Android 개발·출시·운영"
+team: 1인 개발
+contribution: "100%"
 tech:
 - Swift
 - SwiftUI

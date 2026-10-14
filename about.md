@@ -8,7 +8,7 @@ comments: false
 ---
 
 {% assign portfolio = site.data.portfolio %}
-{% assign projects = site.projects | where_exp: 'project', 'project.published != false' | sort: 'order' %}
+{% assign projects = site.projects | concat: site.apps | where_exp: 'project', 'project.published != false' | sort: 'order' %}
 {% assign company_projects = projects | where: 'group', 'company' %}
 {% assign personal_projects = projects | where_exp: 'project', 'project.group != "company"' %}
 
@@ -56,7 +56,7 @@ comments: false
       </section>
       <section class="profile-project-group" id="personal-projects" aria-labelledby="personal-projects-title">
         <div class="profile-project-group__heading"><h3 id="personal-projects-title">개인 프로젝트</h3><span class="profile-count">{{ personal_projects.size }} projects</span></div>
-        <p class="profile-project-group__intro">직접 출시한 앱, 공개한 오픈소스와 해커톤 프로젝트입니다.</p>
+        <p class="profile-project-group__intro">개인 앱은 기획·디자인·개발·출시·운영까지 혼자 맡았습니다. 기여도 100%.</p>
         <div class="profile-filters" role="group" aria-label="개인 프로젝트 분류" hidden>
           <button type="button" data-project-filter="all" data-project-filter-all aria-pressed="true">전체</button>
           {% assign categories = personal_projects | map: 'category' | compact | uniq %}

@@ -6,7 +6,7 @@ category: 웹
 organization: 개인 프로젝트
 period: 2026.01 - 2026.03
 role: 설계·개발
-order: 15
+order: 16
 tech: [TypeScript, React]
 highlight: 목록에서 보여줄 가장 중요한 성과 하나를 적습니다.
 achievements:
@@ -15,6 +15,9 @@ achievements:
 links:
   - label: GitHub
     url: https://github.com/LeeJams
+# 선택 사항: 개발 방식과 실제 기여도
+# team: 1인 개발
+# contribution: "100%"
 # 선택 사항: 관련 블로그 글. 제목과 작성일은 글에서 자동으로 가져옵니다.
 # related_posts:
 #   - /cowork-automation-skills/

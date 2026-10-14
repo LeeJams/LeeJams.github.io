@@ -5,7 +5,9 @@ group: personal
 icon: /assets/img/projects/icons/duty-lounge.jpg
 category: 앱
 order: 10
-role: "기획·앱/백엔드 개발·운영"
+role: "기획·디자인·앱/백엔드 개발·출시·운영"
+team: 1인 개발
+contribution: "100%"
 tech: [React Native, Expo, TypeScript, PostgreSQL, Supabase Auth, RLS, TanStack Query, Jest]
 highlight: "Cafe24 → Supabase 이전 · 서버 고정비 월 11,000원 → 0원 (2025년 이전 당시)"
 achievements:

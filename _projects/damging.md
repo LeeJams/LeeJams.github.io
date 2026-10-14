@@ -6,7 +6,7 @@ icon: /assets/img/projects/icons/damging-icon.png
 category: 해커톤
 organization: 팀 테크노마드 · 새싹톤
 period: 2023.05 - 2023.06
-order: 14
+order: 15
 highlight: "2023 새싹톤 서울경제진흥원장상 (장려)"
 role: "팀 리더·프론트엔드 개발·발표"
 tech:
