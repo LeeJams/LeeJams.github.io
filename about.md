@@ -141,7 +141,6 @@ comments: false
     <p>
       프론트엔드와 백엔드, 데이터와 운영을 오가며 쌓은 경험을 바탕으로
       제품의 완성도와 팀의 실행력을 함께 높이고 싶습니다.
-      함께 일할 기회나 프로젝트 협업, 기술적인 의견 교환이 필요하다면 편하게 연락해 주세요.
     </p>
     <div class="profile-actions"><a href="mailto:{{ site.author.email }}">{{ site.author.email }} <span aria-hidden="true">↗</span></a><a href="{{ '/archive/' | relative_url }}">개발 기록 보기 <span aria-hidden="true">→</span></a></div>
   </section>
