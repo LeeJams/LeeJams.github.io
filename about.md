@@ -67,10 +67,6 @@ comments: false
         {% include portfolio-project-list.html projects=personal_projects %}
         <p class="profile-filter-status" role="status" aria-live="polite" hidden></p>
       </section>
-      <div class="profile-store-links">
-        <a href="https://apps.apple.com/kr/developer/jaemin-lee/id1799551230" target="_blank" rel="noopener">App Store 전체 보기 <span aria-hidden="true">↗</span></a>
-        <a href="https://play.google.com/store/apps/collection/cluster?gsr=SlJqGDFjMDBLMU5GR3R4bS8wbGdKLysycFE9PbICMgoVChFpby5sZWVqYW0uRmx1eGlsZRAHEhcIAhITNTUyOTI1NTg2NzgzNzMxNTgxMRgAsBIA:S:ANO1ljLdG_s" target="_blank" rel="noopener">Google Play 전체 보기 <span aria-hidden="true">↗</span></a>
-      </div>
     </div>
   </section>
 

@@ -2,6 +2,7 @@
   const group = document.querySelector('#personal-projects');
   const filters = group.querySelector('.profile-filters');
   const projects = [...group.querySelectorAll('.profile-project')];
+  const filterItems = [...group.querySelectorAll('[data-project-category]')];
   const status = group.querySelector('.profile-filter-status');
 
   if (projects.length) {
@@ -15,7 +16,7 @@
       });
       const category = button.dataset.projectFilter;
       const showAll = button.hasAttribute('data-project-filter-all');
-      projects.forEach((project) => {
+      filterItems.forEach((project) => {
         project.hidden = !showAll && project.dataset.projectCategory !== category;
       });
       status.hidden = false;

@@ -1,5 +1,6 @@
 <div class="profile-projects">
   {% assign detail_index = 0 %}
+  {% assign last_listed_app = include.projects | where: 'listing_only', true | last %}
   {% for project in include.projects %}
   {% if project.listing_only %}
   {% assign app_link = project.links | first %}
@@ -10,6 +11,12 @@
       {% if app_link %}<span class="profile-project__compact-arrow" aria-hidden="true">↗</span>{% endif %}
     {% if app_link %}</a>{% else %}</div>{% endif %}
   </article>
+  {% if project == last_listed_app %}
+  <div class="profile-store-links" data-project-category="{{ project.category | escape }}">
+    <a href="https://apps.apple.com/kr/developer/jaemin-lee/id1799551230" target="_blank" rel="noopener">App Store 전체 보기 <span aria-hidden="true">↗</span></a>
+    <a href="https://play.google.com/store/apps/collection/cluster?gsr=SlJqGDFjMDBLMU5GR3R4bS8wbGdKLysycFE9PbICMgoVChFpby5sZWVqYW0uRmx1eGlsZRAHEhcIAhITNTUyOTI1NTg2NzgzNzMxNTgxMRgAsBIA:S:ANO1ljLdG_s" target="_blank" rel="noopener">Google Play 전체 보기 <span aria-hidden="true">↗</span></a>
+  </div>
+  {% endif %}
   {% else %}
   {% assign detail_index = detail_index | plus: 1 %}
   <article class="profile-project" data-project-category="{{ project.category | escape }}">

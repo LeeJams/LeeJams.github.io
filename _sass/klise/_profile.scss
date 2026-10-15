@@ -228,7 +228,13 @@ body.profile-page-body {
   @media (max-width: 960px) { .profile-projects { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   @media (max-width: 480px) { .profile-projects { grid-template-columns: minmax(0, 1fr); } }
   .profile-filter-status { margin-top: 12px; color: var(--profile-muted); font-size: var(--profile-size-small); }
-  .profile-store-links a { color: var(--profile-muted); font-size: var(--profile-size-small); }
+  .profile-store-links {
+    grid-column: 1 / -1;
+    margin-top: 0;
+    padding: 16px 0 20px;
+    border-bottom: 1px solid var(--profile-line);
+    a { color: var(--profile-muted); font-size: var(--profile-size-small); }
+  }
 
   .profile-timeline { margin-top: 28px; }
   .profile-record {
