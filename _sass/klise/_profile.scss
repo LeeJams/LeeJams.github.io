@@ -231,7 +231,6 @@ body.profile-page-body {
   .profile-store-links {
     display: flex;
     gap: 20px;
-    grid-column: 1 / -1;
     width: 100%;
     padding: 16px 0 20px;
     border-bottom: 1px solid var(--profile-line);

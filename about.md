@@ -57,6 +57,18 @@ comments: false
       <section class="profile-project-group" id="personal-projects" aria-labelledby="personal-projects-title">
         <div class="profile-project-group__heading"><h3 id="personal-projects-title">개인 프로젝트</h3><span class="profile-count">{{ personal_projects.size }} projects</span></div>
         <p class="profile-project-group__intro">개인 앱은 기획·디자인·개발·출시·운영까지 혼자 맡았습니다. 기여도 100%.</p>
+        <div class="profile-store-links" data-project-category="앱">
+          <a href="https://apps.apple.com/kr/developer/jaemin-lee/id1799551230" target="_blank" rel="noopener">
+            <img class="profile-store-links__icon" src="{{ '/assets/img/stores/app-store.png' | relative_url }}" alt="" width="32" height="32" decoding="async" />
+            <span class="profile-store-links__label">App Store <span class="profile-store-links__caption">전체 보기</span></span>
+            <span class="profile-store-links__arrow" aria-hidden="true">↗</span>
+          </a>
+          <a href="https://play.google.com/store/apps/collection/cluster?gsr=SlJqGDFjMDBLMU5GR3R4bS8wbGdKLysycFE9PbICMgoVChFpby5sZWVqYW0uRmx1eGlsZRAHEhcIAhITNTUyOTI1NTg2NzgzNzMxNTgxMRgAsBIA:S:ANO1ljLdG_s" target="_blank" rel="noopener">
+            <img class="profile-store-links__icon" src="{{ '/assets/img/stores/google-play.svg' | relative_url }}" alt="" width="32" height="32" decoding="async" />
+            <span class="profile-store-links__label">Google Play <span class="profile-store-links__caption">전체 보기</span></span>
+            <span class="profile-store-links__arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
         <div class="profile-filters" role="group" aria-label="개인 프로젝트 분류" hidden>
           <button type="button" data-project-filter="all" data-project-filter-all aria-pressed="true">전체</button>
           {% assign categories = personal_projects | map: 'category' | compact | uniq %}
