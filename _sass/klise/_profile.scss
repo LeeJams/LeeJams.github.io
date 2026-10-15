@@ -232,12 +232,14 @@ body.profile-page-body {
     display: flex;
     gap: 20px;
     grid-column: 1 / -1;
+    width: 100%;
     padding: 16px 0 20px;
     border-bottom: 1px solid var(--profile-line);
     a {
       display: flex;
-      flex: 1;
+      flex: 1 1 0;
       align-items: center;
+      justify-content: center;
       gap: 10px;
       min-width: 0;
       min-height: 64px;
@@ -248,14 +250,14 @@ body.profile-page-body {
       &:hover { color: var(--profile-accent); border-color: var(--profile-accent); }
       &:hover .profile-store-links__arrow { color: var(--profile-accent); transform: translate(2px, -2px); }
     }
-    &__icon { flex: 0 0 24px; width: 24px; height: 24px; fill: currentColor; }
-    &__label { min-width: 0; font-weight: 700; line-height: 1.5; }
+    &__icon { display: block; flex: 0 0 32px; width: 32px; height: 32px; margin: 0; object-fit: contain; }
+    &__label { min-width: 0; font-weight: 700; line-height: 1.5; white-space: nowrap; }
     &__caption { display: block; color: var(--profile-muted); font-weight: 400; }
-    &__arrow { margin-left: auto; color: var(--profile-muted); transition: transform 180ms ease; }
+    &__arrow { flex: 0 0 auto; color: var(--profile-muted); transition: transform 180ms ease; }
     @media (max-width: 480px) {
       gap: 12px;
       a { gap: 8px; }
-      .profile-store-links__icon { flex-basis: 20px; width: 20px; height: 20px; }
+      .profile-store-links__icon { flex-basis: 24px; width: 24px; height: 24px; }
     }
   }
 
