@@ -85,7 +85,7 @@ body.profile-page-body {
     }
   }
 
-  .profile-actions, .profile-store-links {
+  .profile-actions {
     display: flex;
     flex-wrap: wrap;
     gap: 12px 26px;
@@ -229,11 +229,34 @@ body.profile-page-body {
   @media (max-width: 480px) { .profile-projects { grid-template-columns: minmax(0, 1fr); } }
   .profile-filter-status { margin-top: 12px; color: var(--profile-muted); font-size: var(--profile-size-small); }
   .profile-store-links {
+    display: flex;
+    gap: 20px;
     grid-column: 1 / -1;
-    margin-top: 0;
     padding: 16px 0 20px;
     border-bottom: 1px solid var(--profile-line);
-    a { color: var(--profile-muted); font-size: var(--profile-size-small); }
+    a {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+      min-height: 64px;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--profile-line);
+      color: var(--profile-ink);
+      font-size: var(--profile-size-small);
+      &:hover { color: var(--profile-accent); border-color: var(--profile-accent); }
+      &:hover .profile-store-links__arrow { color: var(--profile-accent); transform: translate(2px, -2px); }
+    }
+    &__icon { flex: 0 0 24px; width: 24px; height: 24px; fill: currentColor; }
+    &__label { min-width: 0; font-weight: 700; line-height: 1.5; }
+    &__caption { display: block; color: var(--profile-muted); font-weight: 400; }
+    &__arrow { margin-left: auto; color: var(--profile-muted); transition: transform 180ms ease; }
+    @media (max-width: 480px) {
+      gap: 12px;
+      a { gap: 8px; }
+      .profile-store-links__icon { flex-basis: 20px; width: 20px; height: 20px; }
+    }
   }
 
   .profile-timeline { margin-top: 28px; }
@@ -381,8 +404,8 @@ body.profile-page-body {
   }
   @media (prefers-reduced-motion: reduce) {
     .profile-hero__identity, .profile-hero__content, .profile-hero__portrait { animation: none; }
-    .profile-project__arrow, .profile-project__compact-link, .profile-actions a span { transition: none; }
-    .profile-project__link:hover .profile-project__arrow, .profile-actions a:hover span { transform: none; }
+    .profile-project__arrow, .profile-project__compact-link, .profile-actions a span, .profile-store-links__arrow { transition: none; }
+    .profile-project__link:hover .profile-project__arrow, .profile-actions a:hover span, .profile-store-links a:hover .profile-store-links__arrow { transform: none; }
   }
 }
 
