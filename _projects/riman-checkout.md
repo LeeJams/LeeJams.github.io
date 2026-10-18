@@ -2,6 +2,7 @@
 title: 소비자몰 주문·결제
 summary: "소비자몰 주문·결제를 개발하고, 화면·상태를 기능별로 분리해 수정 범위를 좁혔습니다."
 group: company
+icon: /assets/img/projects/logos/riman.png
 category: 업무
 organization: 리만코리아 · 엔더스
 period: 2022.05 - 2022.10

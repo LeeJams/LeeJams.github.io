@@ -2,6 +2,7 @@
 title: Keeper 직원 관리 서비스
 summary: "직원 관리 서비스의 프론트엔드에서 근로시간 계산의 검증과 웹·앱 연동을 맡았습니다."
 group: company
+icon: /assets/img/projects/logos/keeper.png
 category: 업무
 organization: 한화비전
 period: 2024.05 - 2025.07

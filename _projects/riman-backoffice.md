@@ -2,6 +2,7 @@
 title: 회원몰 백오피스
 summary: "회원·교환·반품 관리 화면을 개발하며, 계보 트리 렌더링과 실시간 고객 정보 연동을 개선했습니다."
 group: company
+icon: /assets/img/projects/logos/riman.png
 category: 업무
 organization: 리만코리아 · 엔더스
 period: 2021.03 - 2022.10

@@ -2,6 +2,7 @@
 title: Sellpick OMS 개발·운영
 summary: "여러 판매 채널의 주문을 한곳에서 수집·관리하는 OMS에서, 주문 조회 성능과 동시 수집의 정합성을 개선했습니다."
 group: company
+icon: /assets/img/projects/logos/sellpick.png
 category: 업무
 organization: 헥토데이터
 period: 2025.08 - 현재

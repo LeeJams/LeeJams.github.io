@@ -2,6 +2,7 @@
 title: 쇼핑몰 연동 QA 자동화
 summary: "AI가 상품 준비·전송·실패 수정·재시도까지 쇼핑몰 연동 QA를 수행하도록 MCP 서버와 실행 모니터를 구축했습니다."
 group: company
+icon: /assets/img/projects/logos/hecto-data.png
 category: 업무
 organization: 헥토데이터
 role: MCP 서버·실행 모니터 설계·개발

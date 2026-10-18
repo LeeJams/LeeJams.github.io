@@ -2,6 +2,7 @@
 title: 포인트 통합 관리
 summary: "포인트 정책 변경을 DB 계산에 반영하고, 월별 배치와 실패 추적을 자동화했습니다."
 group: company
+icon: /assets/img/projects/logos/taejin.svg
 category: 업무
 organization: 태진인터내셔날 · 엔더스
 period: 2021.01 - 2021.12

@@ -2,6 +2,7 @@
 title: KB카드 공모전
 summary: "KB카드 공모전의 포인트 지급·차감·이력을 구현하고, 역할별 권한과 조회 성능을 개선했습니다."
 group: company
+icon: /assets/img/projects/logos/kb-card.svg
 category: 업무
 organization: KB카드 · 엔더스
 period: 2022.10 - 2023.05

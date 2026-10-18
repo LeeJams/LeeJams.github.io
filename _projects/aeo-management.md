@@ -2,6 +2,7 @@
 title: AEO 인증 관리 시스템
 summary: "수기 엑셀을 인증 업무용 데이터로 전환하고, 심사 기준 변경을 설정으로 처리하는 시스템입니다."
 group: company
+icon: /assets/img/projects/logos/hyundai-glovis.svg
 category: 업무
 organization: 현대글로비스 · 엔더스
 period: 2023.08 - 2024.03

@@ -1,28 +1,59 @@
 (() => {
-  const group = document.querySelector('#personal-projects');
-  const filters = group.querySelector('.profile-filters');
-  const projects = [...group.querySelectorAll('.profile-project')];
-  const filterItems = [...group.querySelectorAll('[data-project-category]')];
-  const status = group.querySelector('.profile-filter-status');
+  document.querySelectorAll('[data-project-group]').forEach((group) => {
+    const cards = [...group.querySelectorAll('.profile-project')];
+    const filters = group.querySelector('.profile-filters');
+    const stores = group.querySelector('.profile-store-links');
+    const more = group.querySelector('[data-project-more]');
+    const status = group.querySelector('.profile-filter-status');
+    const title = group.querySelector('h3').textContent;
+    let category = null;
+    let expanded = false;
 
-  if (projects.length) {
-    filters.hidden = false;
-    filters.addEventListener('click', (event) => {
-      const button = event.target.closest('button[data-project-filter]');
-      if (!button) return;
+    const matches = (card) => !category || card.dataset.projectCategory === category;
+    const render = (announce = false) => {
+      const matching = cards.filter(matches);
+      const extraCount = matching.filter((card) => card.hasAttribute('data-project-extra')).length;
+      cards.forEach((card) => {
+        card.hidden = !matches(card) || (!expanded && card.hasAttribute('data-project-extra'));
+      });
+      if (stores) stores.hidden = !!category && category !== '앱';
+      more.hidden = !extraCount;
+      more.setAttribute('aria-expanded', String(expanded));
+      more.setAttribute('aria-label', expanded ? `${title} 접기` : `${title} ${extraCount}개 더 보기`);
+      more.querySelector('[data-project-more-label]').textContent = expanded ? '접기' : '더 보기';
+      more.querySelector('[data-project-more-count]').textContent = expanded ? '' : `+${extraCount}`;
+      if (announce) {
+        status.hidden = false;
+        const label = category ? `${category} 프로젝트` : title;
+        status.textContent = `${label} ${matching.filter((card) => !card.hidden).length}개 표시 · 전체 ${matching.length}개`;
+      }
+    };
 
-      filters.querySelectorAll('button').forEach((filter) => {
-        filter.setAttribute('aria-pressed', String(filter === button));
+    if (filters && cards.length) {
+      filters.hidden = false;
+      filters.addEventListener('click', (event) => {
+        const button = event.target.closest('button[data-project-filter]');
+        if (!button) return;
+        category = button.hasAttribute('data-project-filter-all') ? null : button.dataset.projectFilter;
+        expanded = false;
+        filters.querySelectorAll('button').forEach((filter) => filter.setAttribute('aria-pressed', String(filter === button)));
+        render(true);
       });
-      const category = button.dataset.projectFilter;
-      const showAll = button.hasAttribute('data-project-filter-all');
-      filterItems.forEach((project) => {
-        project.hidden = !showAll && project.dataset.projectCategory !== category;
-      });
-      status.hidden = false;
-      status.textContent = `${button.textContent} 프로젝트 ${projects.filter((project) => !project.hidden).length}개`;
+    }
+
+    more.addEventListener('click', () => {
+      const firstNew = cards.find((card) => card.hidden && matches(card));
+      expanded = !expanded;
+      render(true);
+      if (expanded && firstNew) {
+        firstNew.querySelector('a').focus({ preventScroll: true });
+        firstNew.scrollIntoView({ block: 'nearest' });
+      } else {
+        more.scrollIntoView({ block: 'nearest' });
+      }
     });
-  }
+    render();
+  });
 
   const dialog = document.querySelector('#project-modal');
   if (!dialog || typeof dialog.showModal !== 'function') return;

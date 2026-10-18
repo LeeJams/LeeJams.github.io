@@ -11,6 +11,9 @@ comments: false
 {% assign projects = site.projects | concat: site.apps | where_exp: 'project', 'project.published != false' | sort: 'order' %}
 {% assign company_projects = projects | where: 'group', 'company' %}
 {% assign personal_projects = projects | where_exp: 'project', 'project.group != "company"' %}
+{% assign personal_primary = personal_projects | where_exp: 'project', 'project.listing_only != true' %}
+{% assign personal_extra = personal_projects | where: 'listing_only', true %}
+{% assign personal_cards = personal_primary | concat: personal_extra %}
 
 <div class="profile-page">
   <header class="profile-hero" aria-labelledby="profile-title">
@@ -49,12 +52,12 @@ comments: false
         <span class="profile-count">{{ projects.size }} projects</span>
       </div>
       <p class="profile-section__lead">업무의 문제를 해결한 경험부터 직접 출시한 제품까지.</p>
-      <section class="profile-project-group" id="company-projects" aria-labelledby="company-projects-title">
+      <section class="profile-project-group" id="company-projects" aria-labelledby="company-projects-title" data-project-group>
         <div class="profile-project-group__heading"><h3 id="company-projects-title">회사 프로젝트</h3><span class="profile-count">{{ company_projects.size }} projects</span></div>
         <p class="profile-project-group__intro">서비스의 안정성과 운영 효율을 높인 경험입니다.</p>
-        {% include portfolio-project-list.html projects=company_projects %}
+        {% include portfolio-project-list.html projects=company_projects limit=6 list_id='company-project-list' %}
       </section>
-      <section class="profile-project-group" id="personal-projects" aria-labelledby="personal-projects-title">
+      <section class="profile-project-group" id="personal-projects" aria-labelledby="personal-projects-title" data-project-group>
         <div class="profile-project-group__heading"><h3 id="personal-projects-title">개인 프로젝트</h3><span class="profile-count">{{ personal_projects.size }} projects</span></div>
         <p class="profile-project-group__intro">개인 앱은 기획·디자인·개발·출시·운영까지 혼자 맡았습니다. 기여도 100%.</p>
         <div class="profile-store-links" data-project-category="앱">
@@ -76,8 +79,7 @@ comments: false
           <button type="button" data-project-filter="{{ category | escape }}" aria-pressed="false">{{ category | escape }}</button>
           {% endfor %}
         </div>
-        {% include portfolio-project-list.html projects=personal_projects %}
-        <p class="profile-filter-status" role="status" aria-live="polite" hidden></p>
+        {% include portfolio-project-list.html projects=personal_cards list_id='personal-project-list' %}
       </section>
     </div>
   </section>

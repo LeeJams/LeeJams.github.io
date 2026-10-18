@@ -2,6 +2,7 @@
 title: 쇼핑몰 API 변경 검토 자동화
 summary: "쇼핑몰 API 변경 공지와 실제 사용 코드를 대조하는 검토를 자동화하고, 대응 판단과 코드 수정은 개발자에게 남겼습니다."
 group: company
+icon: /assets/img/projects/logos/hecto-data.png
 category: 업무
 organization: 헥토데이터
 role: 자동화 설계·구현

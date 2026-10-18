@@ -1,5 +1,6 @@
 ---
 title: 내 퍼센트
+summary: "할인·비율·변화율부터 주식 손익과 평균단가까지 계산하고, 결과를 저장해 다시 확인하는 계산기 앱입니다."
 icon: /assets/img/projects/icons/my-percent.svg
 order: 13
 role: 기획·디자인·앱 개발·출시·운영
