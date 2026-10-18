@@ -11,8 +11,8 @@ comments: false
 {% assign projects = site.projects | concat: site.apps | where_exp: 'project', 'project.published != false' | sort: 'order' %}
 {% assign company_projects = projects | where: 'group', 'company' %}
 {% assign personal_projects = projects | where_exp: 'project', 'project.group != "company"' %}
-{% assign personal_primary = personal_projects | where_exp: 'project', 'project.listing_only != true' %}
-{% assign personal_extra = personal_projects | where: 'listing_only', true %}
+{% assign personal_primary = personal_projects | where_exp: 'project', 'project.listing_only != true and project.more != true' %}
+{% assign personal_extra = personal_projects | where_exp: 'project', 'project.listing_only == true or project.more == true' %}
 {% assign personal_cards = personal_primary | concat: personal_extra %}
 
 <div class="profile-page">
@@ -59,7 +59,7 @@ comments: false
       </section>
       <section class="profile-project-group" id="personal-projects" aria-labelledby="personal-projects-title" data-project-group>
         <div class="profile-project-group__heading"><h3 id="personal-projects-title">개인 프로젝트</h3><span class="profile-count">{{ personal_projects.size }} projects</span></div>
-        <p class="profile-project-group__intro">개인 앱은 기획·디자인·개발·출시·운영까지 혼자 맡았습니다. 기여도 100%.</p>
+        <p class="profile-project-group__intro">직접 겪은 불편과 가까운 사람들의 필요를 앱으로 풀어갑니다. 개인 앱은 기획·디자인·개발·출시·운영까지 1인 개발로 진행했습니다. 기여도 100%.</p>
         <div class="profile-store-links" data-project-category="앱">
           <a href="https://apps.apple.com/kr/developer/jaemin-lee/id1799551230" target="_blank" rel="noopener">
             <img class="profile-store-links__icon" src="{{ '/assets/img/stores/app-store.png' | relative_url }}" alt="" width="32" height="32" decoding="async" />

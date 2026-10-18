@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="background" x1="170" y1="80" x2="870" y2="940" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FCFAF5"/>
+      <stop offset="0.55" stop-color="#FAF6EF"/>
+      <stop offset="1" stop-color="#F8EBDD"/>
+    </linearGradient>
+    <radialGradient id="coralGlow" cx="0" cy="0" r="1" gradientTransform="translate(110 925) rotate(-35) scale(620 520)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F5A5B6" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#F5A5B6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orangeGlow" cx="0" cy="0" r="1" gradientTransform="translate(930 900) rotate(-145) scale(620 520)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F3A65F" stop-opacity="0.78"/>
+      <stop offset="1" stop-color="#F3A65F" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="emptyRing" x1="278" y1="338" x2="538" y2="682" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4D4D52" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#4D4D52" stop-opacity="0.16"/>
+    </linearGradient>
+    <linearGradient id="completedCircle" x1="460" y1="290" x2="745" y2="690" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#242426"/>
+      <stop offset="1" stop-color="#080809"/>
+    </linearGradient>
+    <filter id="emptyShadow" x="180" y="270" width="470" height="500" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="12" stdDeviation="20" flood-color="#241C17" flood-opacity="0.1"/>
+    </filter>
+    <filter id="completedShadow" x="325" y="220" width="570" height="590" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="26" stdDeviation="30" flood-color="#1A1110" flood-opacity="0.24"/>
+    </filter>
+  </defs>
+
+  <rect width="1024" height="1024" fill="url(#background)"/>
+  <rect width="1024" height="1024" fill="url(#coralGlow)"/>
+  <rect width="1024" height="1024" fill="url(#orangeGlow)"/>
+
+  <g transform="translate(496 526) scale(1.22) translate(-512 -500)">
+    <g filter="url(#emptyShadow)">
+      <circle cx="414" cy="508" r="178" fill="#FFFFFF" fill-opacity="0.72"/>
+      <circle cx="414" cy="508" r="168" fill="none" stroke="url(#emptyRing)" stroke-width="20"/>
+    </g>
+
+    <g filter="url(#completedShadow)">
+      <circle cx="600" cy="486" r="194" fill="url(#completedCircle)"/>
+      <circle cx="600" cy="486" r="190" fill="none" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="8"/>
+    </g>
+
+    <path
+      d="M533 495 L586 531 C603 543 654 459 677 438"
+      fill="none"
+      stroke="#FFFFFF"
+      stroke-width="32"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </g>
+</svg>

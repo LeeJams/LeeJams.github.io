@@ -4,7 +4,7 @@ summary: "조직·구성원의 계층을 표시하는 Vue 3 컴포넌트로, 화
 group: personal
 icon: /assets/img/projects/icons/organization-chart.svg
 category: 오픈소스
-order: 14
+order: 15
 role: "컴포넌트 설계·개발·npm 배포"
 tech:
 - Vue 3

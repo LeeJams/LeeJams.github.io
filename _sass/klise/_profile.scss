@@ -209,6 +209,15 @@ body.profile-page-body {
       img { display: block; width: 100%; height: 100%; margin: 0; object-fit: contain; }
     }
     &__summary { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 20px; color: var(--profile-text); font-size: var(--profile-size-body); line-height: 1.75; }
+    &__story {
+      display: grid;
+      flex: 1;
+      align-content: start;
+      gap: 16px;
+      margin: 0 0 4px;
+      dt { margin-bottom: 4px; color: var(--profile-muted); font-size: var(--profile-size-small); }
+      dd { color: var(--profile-text); font-size: var(--profile-size-body); line-height: 1.75; }
+    }
     &__highlight { display: flex; flex-direction: column; gap: 6px; margin-top: auto; padding-top: 18px; border-top: 1px solid var(--profile-line); color: var(--profile-accent); font-size: var(--profile-size-small); font-weight: 700; line-height: 1.7; }
     &__highlight-label { color: var(--profile-muted); font-weight: 500; }
     &__tech { margin-top: 16px; color: var(--profile-muted); font-size: var(--profile-size-small); line-height: 1.7; }
@@ -369,6 +378,14 @@ body.profile-page-body {
     p { color: var(--profile-text); font-size: var(--profile-size-body); line-height: 1.8; }
   }
   .profile-detail__achievement-index { padding-top: 3px; color: var(--profile-accent); font-size: var(--profile-size-small); font-variant-numeric: tabular-nums; }
+  .profile-detail__content + .profile-detail__achievements { margin-top: 40px; }
+  .profile-detail__build {
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid var(--profile-line);
+    h2 { margin: 0; font-size: var(--profile-size-body); font-weight: 800; }
+    .profile-detail__meta { margin-top: 20px; }
+  }
   .profile-detail__cover { margin: 40px 0; img { width: 100%; height: auto; } }
   .profile-detail__content {
     margin-top: 36px;

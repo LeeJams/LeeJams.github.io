@@ -1,5 +1,15 @@
 {% assign detail = include.project %}
 {% assign detail_id = include.id | default: 'project' %}
+{% assign personal_app = false %}
+{% if detail.group == 'personal' and detail.category == '앱' %}{% assign personal_app = true %}{% endif %}
+{% capture detail_meta %}
+<dl class="profile-detail__meta">
+  {% if detail.period %}<div><dt>기간</dt><dd>{{ detail.period | escape }}</dd></div>{% endif %}
+  {% if detail.role %}<div><dt>담당 범위</dt><dd>{{ detail.role | escape }}</dd></div>{% endif %}
+  {% if detail.team %}<div><dt>개발 방식</dt><dd>{{ detail.team | escape }}{% if detail.contribution %} · 기여도 {{ detail.contribution | escape }}{% endif %}</dd></div>{% endif %}
+  {% if detail.tech %}<div><dt>기술</dt><dd>{{ detail.tech | join: ', ' | escape }}</dd></div>{% endif %}
+</dl>
+{% endcapture %}
 <article class="profile-page profile-detail">
   <header class="profile-detail__hero">
     <p class="profile-eyebrow">{{ detail.category | default: '프로젝트' | escape }}{% if detail.organization %} · {{ detail.organization | escape }}{% endif %}</p>
@@ -8,12 +18,7 @@
       {% if include.modal %}<h2 class="profile-detail__title" id="{{ detail_id }}-title">{{ detail.title | escape }}</h2>{% else %}<h1 class="profile-detail__title" id="{{ detail_id }}-title">{{ detail.title | escape }}</h1>{% endif %}
     </div>
     {% if detail.summary %}<p class="profile-detail__summary">{{ detail.summary | escape }}</p>{% endif %}
-    <dl class="profile-detail__meta">
-      {% if detail.period %}<div><dt>기간</dt><dd>{{ detail.period | escape }}</dd></div>{% endif %}
-      {% if detail.role %}<div><dt>담당 범위</dt><dd>{{ detail.role | escape }}</dd></div>{% endif %}
-      {% if detail.team %}<div><dt>개발 방식</dt><dd>{{ detail.team | escape }}{% if detail.contribution %} · 기여도 {{ detail.contribution | escape }}{% endif %}</dd></div>{% endif %}
-      {% if detail.tech %}<div><dt>기술</dt><dd>{{ detail.tech | join: ', ' | escape }}</dd></div>{% endif %}
-    </dl>
+    {% unless personal_app %}{{ detail_meta }}{% endunless %}
     {% if detail.links %}
     <div class="profile-actions" aria-label="프로젝트 관련 링크">
       {% for link in detail.links %}
@@ -23,9 +28,10 @@
     </div>
     {% endif %}
   </header>
+  {% if personal_app %}<div class="profile-detail__content">{{ include.content }}</div>{% endif %}
   {% if detail.achievements and detail.achievements.size > 0 %}
   <section class="profile-detail__achievements" aria-labelledby="{{ detail_id }}-achievements-title">
-    <h2 id="{{ detail_id }}-achievements-title">주요 성과</h2>
+    <h2 id="{{ detail_id }}-achievements-title">{{ detail.achievements_title | default: '주요 성과' | escape }}</h2>
     <ul role="list">
       {% for achievement in detail.achievements %}
       <li><span class="profile-detail__achievement-index" aria-hidden="true">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span><div><h3>{{ achievement.title | escape }}</h3><p>{{ achievement.detail | escape }}</p></div></li>
@@ -35,7 +41,14 @@
   {% elsif detail.highlight %}
   <p class="profile-detail__highlight"><span>주요 성과</span>{{ detail.highlight | escape }}</p>
   {% endif %}
+  {% if personal_app %}
+  <section class="profile-detail__build" aria-labelledby="{{ detail_id }}-build-title">
+    <h2 id="{{ detail_id }}-build-title">제작 정보</h2>
+    {{ detail_meta }}
+  </section>
+  {% else %}
   <div class="profile-detail__content">{{ include.content }}</div>
+  {% endif %}
   {% if detail.cover %}<figure class="profile-detail__cover"><img src="{{ detail.cover | relative_url }}" alt="{{ detail.cover_alt | default: detail.title | escape }}" loading="lazy" />{% if detail.cover_caption %}<figcaption>{{ detail.cover_caption | escape }}</figcaption>{% endif %}</figure>{% endif %}
   {% if detail.related_posts %}
   {% capture related_documents %}
