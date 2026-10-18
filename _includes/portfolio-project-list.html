@@ -1,5 +1,4 @@
 <div class="profile-projects">
-  {% assign detail_index = 0 %}
   {% for project in include.projects %}
   {% if project.listing_only %}
   {% assign app_link = project.links | first %}
@@ -11,31 +10,20 @@
     {% if app_link %}</a>{% else %}</div>{% endif %}
   </article>
   {% else %}
-  {% assign detail_index = detail_index | plus: 1 %}
   <article class="profile-project" data-project-category="{{ project.category | escape }}">
-    <a class="profile-project__link" href="{{ project.url | relative_url }}" aria-label="{{ project.title | escape }} 상세 보기">
-      <span class="profile-project__index" aria-hidden="true">{% if detail_index < 10 %}0{% endif %}{{ detail_index }}</span>
-      <div class="profile-project__copy">
-        <p class="profile-project__meta">{{ project.category | default: '프로젝트' | escape }}{% if project.organization %} · {{ project.organization | escape }}{% endif %}{% if project.period %} <span>{{ project.period | escape }}</span>{% endif %}{% if project.team %}<span class="profile-project__ownership">{{ project.team | escape }}{% if project.contribution %} · 기여도 {{ project.contribution | escape }}{% endif %}</span>{% endif %}</p>
-        <h4 class="profile-project__title">
-          {% if project.group != 'company' %}
-          <span class="profile-project__icon" aria-hidden="true">
-            {% if project.icon %}
-            <img src="{{ project.icon | relative_url }}" alt="" width="40" height="40" loading="lazy" decoding="async" />
-            {% else %}
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" focusable="false">
-              <rect x="3" y="3" width="7" height="7" rx="2" /><rect x="14" y="3" width="7" height="7" rx="2" /><rect x="3" y="14" width="7" height="7" rx="2" /><rect x="14" y="14" width="7" height="7" rx="2" />
-            </svg>
-            {% endif %}
-          </span>
-          {% endif %}
-          <span>{{ project.title | escape }}</span>
-        </h4>
-        <p class="profile-project__summary">{{ project.summary | escape }}</p>
-        {% if project.highlight %}<p class="profile-project__highlight"><span class="profile-project__highlight-label">주요 성과</span><span>{{ project.highlight | escape }}</span></p>{% endif %}
-        {% if project.tech %}<p class="profile-project__tech">{{ project.tech | join: ' / ' | escape }}</p>{% endif %}
+    <a class="profile-project__link" href="{{ project.url | relative_url }}" data-project-modal="project-detail-{{ project.slug }}" aria-label="{{ project.title | escape }} 상세 보기" aria-haspopup="dialog" aria-controls="project-modal">
+      <div class="profile-project__brand">
+        {% if project.icon %}<span class="profile-project__icon" aria-hidden="true"><img src="{{ project.icon | relative_url }}" alt="" width="48" height="48" loading="lazy" decoding="async" /></span>{% endif %}
+        <p class="profile-project__meta">{% if project.organization %}{{ project.organization | escape }}{% else %}{{ project.category | default: '프로젝트' | escape }}{% endif %}{% if project.team %}<span class="profile-project__ownership">{{ project.team | escape }}{% if project.contribution %} · 기여도 {{ project.contribution | escape }}{% endif %}</span>{% endif %}</p>
       </div>
-      <span class="profile-project__arrow" aria-hidden="true">↗</span>
+      <h4 class="profile-project__title">{{ project.title | escape }}</h4>
+      <p class="profile-project__summary">{{ project.summary | escape }}</p>
+      {% if project.highlight %}<p class="profile-project__highlight"><span class="profile-project__highlight-label">주요 성과</span><span>{{ project.highlight | escape }}</span></p>{% endif %}
+      {% if project.tech %}<p class="profile-project__tech">{{ project.tech | slice: 0, 3 | join: ' · ' | escape }}</p>{% endif %}
+      <div class="profile-project__footer">
+        <span class="profile-project__period">{{ project.period | escape }}</span>
+        <span class="profile-project__action">상세 보기 <svg class="profile-project__arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-7 7M10 20H4v-6M4 20l7-7" /></svg></span>
+      </div>
     </a>
   </article>
   {% endif %}

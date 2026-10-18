@@ -1,0 +1,66 @@
+{% assign detail = include.project %}
+{% assign detail_id = include.id | default: 'project' %}
+<article class="profile-page profile-detail">
+  <header class="profile-detail__hero">
+    <p class="profile-eyebrow">{{ detail.category | default: '프로젝트' | escape }}{% if detail.organization %} · {{ detail.organization | escape }}{% endif %}</p>
+    <div class="profile-detail__heading">
+      {% if detail.icon %}<img class="profile-detail__icon" src="{{ detail.icon | relative_url }}" alt="" width="56" height="56" />{% endif %}
+      {% if include.modal %}<h2 class="profile-detail__title" id="{{ detail_id }}-title">{{ detail.title | escape }}</h2>{% else %}<h1 class="profile-detail__title" id="{{ detail_id }}-title">{{ detail.title | escape }}</h1>{% endif %}
+    </div>
+    {% if detail.summary %}<p class="profile-detail__summary">{{ detail.summary | escape }}</p>{% endif %}
+    <dl class="profile-detail__meta">
+      {% if detail.period %}<div><dt>기간</dt><dd>{{ detail.period | escape }}</dd></div>{% endif %}
+      {% if detail.role %}<div><dt>담당 범위</dt><dd>{{ detail.role | escape }}</dd></div>{% endif %}
+      {% if detail.team %}<div><dt>개발 방식</dt><dd>{{ detail.team | escape }}{% if detail.contribution %} · 기여도 {{ detail.contribution | escape }}{% endif %}</dd></div>{% endif %}
+      {% if detail.tech %}<div><dt>기술</dt><dd>{{ detail.tech | join: ', ' | escape }}</dd></div>{% endif %}
+    </dl>
+    {% if detail.links %}
+    <div class="profile-actions" aria-label="프로젝트 관련 링크">
+      {% for link in detail.links %}
+      {% assign prefix = link.url | slice: 0, 4 %}
+      {% if prefix == 'http' %}<a href="{{ link.url | escape }}" target="_blank" rel="noopener">{{ link.label | escape }} <span aria-hidden="true">↗</span></a>{% else %}<a href="{{ link.url | relative_url }}">{{ link.label | escape }} <span aria-hidden="true">→</span></a>{% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+  </header>
+  {% if detail.achievements and detail.achievements.size > 0 %}
+  <section class="profile-detail__achievements" aria-labelledby="{{ detail_id }}-achievements-title">
+    <h2 id="{{ detail_id }}-achievements-title">주요 성과</h2>
+    <ul role="list">
+      {% for achievement in detail.achievements %}
+      <li><span class="profile-detail__achievement-index" aria-hidden="true">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span><div><h3>{{ achievement.title | escape }}</h3><p>{{ achievement.detail | escape }}</p></div></li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% elsif detail.highlight %}
+  <p class="profile-detail__highlight"><span>주요 성과</span>{{ detail.highlight | escape }}</p>
+  {% endif %}
+  <div class="profile-detail__content">{{ include.content }}</div>
+  {% if detail.cover %}<figure class="profile-detail__cover"><img src="{{ detail.cover | relative_url }}" alt="{{ detail.cover_alt | default: detail.title | escape }}" loading="lazy" />{% if detail.cover_caption %}<figcaption>{{ detail.cover_caption | escape }}</figcaption>{% endif %}</figure>{% endif %}
+  {% if detail.related_posts %}
+  {% capture related_documents %}
+    {% for post_url in detail.related_posts %}
+      {% assign related_post = site.posts | where: 'url', post_url | first %}
+      {% if related_post %}
+      <li><a href="{{ related_post.url | relative_url }}"><span>{{ related_post.title | escape }}</span><span aria-hidden="true">↗</span></a><time datetime="{{ related_post.date | date: '%Y-%m-%d' }}">{{ related_post.date | date: '%Y.%m.%d' }}</time></li>
+      {% endif %}
+    {% endfor %}
+  {% endcapture %}
+  {% assign related_documents = related_documents | strip %}
+  {% if related_documents != '' %}
+  <aside class="profile-detail__documents" aria-labelledby="{{ detail_id }}-documents-title">
+    <h2 id="{{ detail_id }}-documents-title">관련 문서</h2>
+    <ul>{{ related_documents }}</ul>
+  </aside>
+  {% endif %}
+  {% endif %}
+  <nav class="profile-detail__footer" aria-label="프로젝트 목록">
+    {% if include.modal %}
+    <button type="button" class="profile-modal__return" data-project-close><span aria-hidden="true">←</span> 목록으로 돌아가기</button>
+    {% elsif detail.group == 'company' %}
+    <a href="{{ '/about/' | relative_url }}#company-projects">← 회사 프로젝트 목록으로 돌아가기</a>
+    {% else %}
+    <a href="{{ '/about/' | relative_url }}#personal-projects">← 개인 프로젝트 목록으로 돌아가기</a>
+    {% endif %}
+  </nav>
+</article>

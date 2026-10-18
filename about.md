@@ -41,7 +41,7 @@ comments: false
     <a href="#education">학력·교육</a>
   </nav>
 
-  <section class="profile-section" id="projects" aria-labelledby="projects-title">
+  <section class="profile-section profile-section--projects" id="projects" aria-labelledby="projects-title">
     <p class="profile-section__label">01 / Projects</p>
     <div class="profile-section__body">
       <div class="profile-section__heading">
@@ -153,4 +153,20 @@ comments: false
     <div class="profile-actions"><a href="mailto:{{ site.author.email }}">{{ site.author.email }} <span aria-hidden="true">↗</span></a><a href="{{ '/archive/' | relative_url }}">개발 기록 보기 <span aria-hidden="true">→</span></a></div>
   </section>
 </div>
-<script src="{{ '/assets/js/portfolio.js' | relative_url }}" defer></script>
+
+<dialog class="profile-modal" id="project-modal" aria-labelledby="project-modal-title">
+  <div class="profile-modal__toolbar">
+    <span>프로젝트 상세</span>
+    <button type="button" class="profile-modal__close" data-project-close aria-label="프로젝트 상세 닫기" autofocus><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="m6 6 12 12M6 18 18 6" /></svg></button>
+  </div>
+  <div class="profile-modal__scroll"><div class="profile-modal__content"></div></div>
+</dialog>
+{% for project in projects %}
+{% unless project.listing_only %}
+<template id="project-detail-{{ project.slug }}">
+  {% assign detail_content = project.content | markdownify %}
+  {% include portfolio-project-detail.html project=project content=detail_content modal=true id='project-modal' %}
+</template>
+{% endunless %}
+{% endfor %}
+<script src="{{ '/assets/js/portfolio.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
