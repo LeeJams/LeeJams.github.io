@@ -11,9 +11,11 @@ comments: false
 {% assign projects = site.projects | concat: site.apps | where_exp: 'project', 'project.published != false' | sort: 'order' %}
 {% assign company_projects = projects | where: 'group', 'company' %}
 {% assign personal_projects = projects | where_exp: 'project', 'project.group != "company"' %}
-{% assign personal_primary = personal_projects | where_exp: 'project', 'project.listing_only != true and project.more != true' %}
-{% assign personal_extra = personal_projects | where_exp: 'project', 'project.listing_only == true or project.more == true' %}
-{% assign personal_cards = personal_primary | concat: personal_extra %}
+{% assign personal_details = personal_projects | where_exp: 'project', 'project.listing_only != true' %}
+{% assign personal_primary = personal_details | where_exp: 'project', 'project.more != true' %}
+{% assign personal_more = personal_details | where: 'more', true %}
+{% assign personal_extra = personal_projects | where: 'listing_only', true %}
+{% assign personal_cards = personal_primary | concat: personal_more | concat: personal_extra %}
 
 <div class="profile-page">
   <header class="profile-hero" aria-labelledby="profile-title">
