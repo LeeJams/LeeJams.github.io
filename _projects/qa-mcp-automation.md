@@ -6,6 +6,8 @@ icon: /assets/img/projects/logos/hecto-data.png
 category: 업무
 organization: 헥토데이터
 role: MCP 서버·실행 모니터 설계·개발
+problem: "화면 이동과 반복 입력으로 테스트 상품 준비에 시간이 들었습니다."
+solution: "AI가 상품 준비·전송·실패 수정·재시도를 수행하도록 화면에서 쓰는 API를 MCP 도구로 연결했습니다."
 order: 0
 tech:
   - MCP

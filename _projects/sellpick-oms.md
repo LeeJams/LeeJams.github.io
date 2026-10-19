@@ -7,6 +7,8 @@ category: 업무
 organization: 헥토데이터
 period: 2025.08 - 현재
 role: 백엔드 개발·운영
+problem: "주문 목록에서 뒤 페이지로 갈수록 조회 대기가 길어졌습니다."
+solution: "현재 페이지의 주문 PK를 먼저 고른 뒤, 해당 주문에만 상품·재고·금액 등 상세 계산을 적용했습니다."
 order: 2
 tech:
 - Java

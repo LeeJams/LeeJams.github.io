@@ -7,6 +7,8 @@ category: 업무
 organization: 현대글로비스 · 엔더스
 period: 2023.08 - 2024.03
 role: 풀스택 개발
+problem: "수기 엑셀에 흩어진 심사 데이터를 관리하고, 바뀌는 인증 기준을 반영해야 했습니다."
+solution: "엑셀을 검증·이관해 DB로 관리하고, 화면과 백엔드가 같은 심사 항목 설정을 쓰도록 했습니다."
 order: 4
 tech:
 - Vue 3

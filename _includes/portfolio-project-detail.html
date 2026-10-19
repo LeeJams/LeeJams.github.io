@@ -28,6 +28,12 @@
     </div>
     {% endif %}
   </header>
+  {% if detail.group == 'company' and detail.problem and detail.solution %}
+  <dl class="profile-detail__approach" aria-label="문제와 해결 방법">
+    <div><dt>해결하려던 문제</dt><dd>{{ detail.problem | escape }}</dd></div>
+    <div><dt>해결 방법</dt><dd>{{ detail.solution | escape }}</dd></div>
+  </dl>
+  {% endif %}
   {% if personal_app %}<div class="profile-detail__content">{{ include.content }}</div>{% endif %}
   {% if detail.achievements and detail.achievements.size > 0 %}
   <section class="profile-detail__achievements" aria-labelledby="{{ detail_id }}-achievements-title">

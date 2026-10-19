@@ -7,6 +7,8 @@ category: 업무
 organization: 한화비전
 period: 2024.05 - 2025.07
 role: 프론트엔드 개발
+problem: "화면을 실행하지 않고도 근로시간 계산 규칙을 검증할 수 있어야 했습니다."
+solution: "계산 로직을 화면에서 분리해 Vitest로 검증하고, WebView 브릿지로 웹 기능을 앱과 연결했습니다."
 order: 3
 tech:
 - React

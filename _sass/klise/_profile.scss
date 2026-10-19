@@ -226,6 +226,7 @@ body.profile-page-body {
     &__action { display: inline-flex; align-items: center; gap: 6px; margin-left: auto; white-space: nowrap; }
     &__arrow { flex: 0 0 18px; width: 18px; height: 18px; color: var(--profile-muted); transition: transform 180ms ease; }
   }
+  #company-projects .profile-project__story { margin-bottom: 20px; }
   #personal-projects .profile-project { flex-basis: calc((100% - 20px) / 2); }
   @media (max-width: 960px) { .profile-project { flex-basis: calc((100% - 20px) / 2); } }
   @media (max-width: 640px) {
@@ -334,6 +335,13 @@ body.profile-page-body {
   .profile-detail__heading { display: flex; align-items: center; gap: 16px; margin: 16px 0 20px; }
   .profile-detail__heading .profile-detail__icon { flex: 0 0 56px; width: 56px; height: 56px; margin: 0; border-radius: 14px; object-fit: contain; }
   .profile-detail__summary { font-size: var(--profile-size-body); line-height: 1.8; }
+  .profile-detail__approach {
+    display: grid;
+    gap: 20px;
+    margin: 0 0 32px;
+    dt { margin-bottom: 6px; color: var(--profile-muted); font-size: var(--profile-size-small); }
+    dd { color: var(--profile-text); font-size: var(--profile-size-body); line-height: 1.8; }
+  }
   .profile-detail__meta {
     display: grid;
     gap: 12px;

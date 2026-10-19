@@ -7,6 +7,8 @@ category: 업무
 organization: 태진인터내셔날 · 엔더스
 period: 2021.01 - 2021.12
 role: DB 설계·운영
+problem: "등급 산정 기간 변경을 포인트 계산에 반영하고, 매월 배치를 반복 실행해야 했습니다."
+solution: "조회 범위와 PL/SQL을 정책에 맞추고, 월별 배치의 정기 실행과 실패 이력 기록을 자동화했습니다."
 order: 8
 tech:
 - Oracle

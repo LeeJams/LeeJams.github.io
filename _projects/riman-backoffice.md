@@ -7,6 +7,8 @@ category: 업무
 organization: 리만코리아 · 엔더스
 period: 2021.03 - 2022.10
 role: 프론트엔드 개발·운영
+problem: "회원 계보를 확인하려면 전체 트리의 렌더링을 기다려야 했습니다."
+solution: "필요한 계층부터 단계적으로 렌더링하도록 지연 로딩을 적용했습니다."
 order: 7
 tech:
 - Vue 3
