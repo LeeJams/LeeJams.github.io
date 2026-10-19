@@ -6,7 +6,7 @@ icon: /assets/img/projects/logos/hecto-data.png
 category: 업무
 organization: 헥토데이터
 role: 자동화 설계·구현
-problem: "쇼핑몰별 변경 공지와 실제 사용 코드를 매번 수작업으로 대조해야 했습니다."
+problem: "쇼핑몰별 공지 수집과 코드 대조를 반복해야 해서, 확인 작업을 줄이고 대응 여부 판단에 집중하고 싶었습니다."
 solution: "공지 수집·코드 대조·리포트를 자동화하고, 실제 호출과 응답 필드 사용까지 확인해 오탐을 줄였습니다."
 order: 1
 tech:
