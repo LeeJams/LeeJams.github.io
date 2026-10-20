@@ -42,8 +42,6 @@ collections:
   projects:
     output: true
     permalink: /about/projects/:name/
-  apps:
-    output: false
 
 # Markdown settings
 markdown: kramdown
@@ -66,14 +64,6 @@ defaults:
       body_class: profile-page-body
       group: personal
       comments: false
-  - scope:
-      path: ""
-      type: apps
-    values:
-      layout: null
-      group: personal
-      category: 앱
-      listing_only: true
 
 # Jekyll Compose default front matter
 jekyll_compose:

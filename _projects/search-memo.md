@@ -1,5 +1,8 @@
 ---
 title: 검색메모
+group: personal
+category: 앱
+more: true
 summary: "메모와 프롬프트를 폴더로 정리하고, 저장한 내용을 검색이나 AI 앱 실행으로 바로 이어 주는 메모 앱입니다."
 icon: /assets/img/projects/icons/search-memo.jpg
 order: 12
@@ -15,3 +18,8 @@ links:
   - label: Google Play
     url: https://play.google.com/store/apps/details?id=com.leejam.searchmemo
 ---
+
+## 제품에서 고려한 점
+
+- **다시 찾기 쉬운 보관:** 메모와 프롬프트를 폴더로 묶어, 용도에 맞는 내용을 꺼내 쓸 수 있도록 구성했습니다.
+- **저장 다음의 행동:** 내용을 복사해 다른 앱으로 옮기는 과정을 줄이기 위해, 저장한 메모에서 검색이나 AI 앱 실행으로 바로 이어지게 했습니다.

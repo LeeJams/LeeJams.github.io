@@ -1,14 +1,9 @@
 <div class="profile-projects" id="{{ include.list_id }}">
   {% for project in include.projects %}
   {% assign is_extra = false %}
-  {% if project.listing_only or project.more %}{% assign is_extra = true %}{% elsif include.limit and forloop.index > include.limit %}{% assign is_extra = true %}{% endif %}
-  {% assign app_link = project.links | first %}
+  {% if project.more %}{% assign is_extra = true %}{% elsif include.limit and forloop.index > include.limit %}{% assign is_extra = true %}{% endif %}
   <article class="profile-project" data-project-category="{{ project.category | escape }}"{% if is_extra %} data-project-extra{% endif %}>
-    {% if project.listing_only %}
-    <a class="profile-project__link" href="{{ app_link.url | escape }}" target="_blank" rel="noopener" aria-label="{{ project.title | escape }} {{ app_link.label | escape }}에서 보기">
-    {% else %}
     <a class="profile-project__link" href="{{ project.url | relative_url }}" data-project-modal="project-detail-{{ project.slug }}" aria-label="{{ project.title | escape }} 상세 보기" aria-haspopup="dialog" aria-controls="project-modal">
-    {% endif %}
       <div class="profile-project__brand">
         {% if project.icon %}<span class="profile-project__icon" aria-hidden="true"><img src="{{ project.icon | relative_url }}" alt="" width="48" height="48" loading="lazy" decoding="async" /></span>{% endif %}
         <p class="profile-project__meta">{% if project.organization %}{{ project.organization | escape }}{% else %}{{ project.category | default: '프로젝트' | escape }}{% endif %}{% if project.team %}<span class="profile-project__ownership">{{ project.team | escape }}{% if project.contribution %} · 기여도 {{ project.contribution | escape }}{% endif %}</span>{% endif %}</p>
@@ -21,13 +16,12 @@
       </dl>
       {% else %}
       <p class="profile-project__summary">{{ project.summary | escape }}</p>
-      {% if project.listing_only and project.role %}<p class="profile-project__highlight"><span class="profile-project__highlight-label">담당 범위</span><span>{{ project.role | escape }}</span></p>{% endif %}
       {% endif %}
       {% if project.highlight %}<p class="profile-project__highlight"><span class="profile-project__highlight-label">{{ project.achievements_title | default: '주요 성과' | escape }}</span><span>{{ project.highlight | escape }}</span></p>{% endif %}
-      {% if project.tech %}<p class="profile-project__tech">{{ project.tech | slice: 0, 3 | join: ' · ' | escape }}</p>{% elsif project.listing_only %}<p class="profile-project__tech">{{ project.links | map: 'label' | join: ' · ' | escape }}</p>{% endif %}
+      {% if project.tech %}<p class="profile-project__tech">{{ project.tech | slice: 0, 3 | join: ' · ' | escape }}</p>{% endif %}
       <div class="profile-project__footer">
         <span class="profile-project__period">{{ project.period | escape }}</span>
-        <span class="profile-project__action">{% if project.listing_only %}앱 보기{% else %}상세 보기{% endif %} <svg class="profile-project__arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="{% if project.listing_only %}M6 18 18 6M6 6h12v12{% else %}M14 4h6v6M20 4l-7 7M10 20H4v-6M4 20l7-7{% endif %}" /></svg></span>
+        <span class="profile-project__action">상세 보기 <svg class="profile-project__arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-7 7M10 20H4v-6M4 20l7-7" /></svg></span>
       </div>
     </a>
   </article>

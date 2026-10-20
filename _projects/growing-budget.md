@@ -1,5 +1,8 @@
 ---
 title: 자라는 가계부
+group: personal
+category: 앱
+more: true
 summary: "수입과 고정 지출로 자유 예산을 계산하고, 소비 흐름을 나무의 변화로 보여 주는 개인 가계부 앱입니다."
 icon: /assets/img/projects/icons/growing-budget.jpg
 order: 13
@@ -13,3 +16,8 @@ links:
   - label: App Store
     url: https://apps.apple.com/kr/app/%EC%9E%90%EB%9D%BC%EB%8A%94-%EA%B0%80%EA%B3%84%EB%B6%80/id6774437513
 ---
+
+## 제품에서 고려한 점
+
+- **쓸 수 있는 예산을 기준으로:** 수입에서 고정 지출을 고려한 자유 예산을 계산해, 지출 기록과 함께 남은 소비 여력을 확인하도록 했습니다.
+- **소비 흐름을 시각적으로 표현:** 금액만 나열하는 대신 나무의 변화로 소비 흐름을 보여 주어, 자신의 지출 상태를 살펴볼 수 있게 했습니다.
