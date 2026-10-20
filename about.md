@@ -3,7 +3,7 @@ title: 이재민 · Portfolio
 permalink: /about/
 layout: page
 body_class: profile-page-body
-description: 업무의 목적과 사용자의 상황을 먼저 살피는 개발자 이재민의 포트폴리오입니다. 웹 서비스 개발·운영과 개인 앱 기획·출시 경험을 소개합니다.
+description: 업무의 흐름과 사용자의 필요를 살피는 개발자 이재민의 포트폴리오입니다. 다양한 웹 서비스 개발 경험과 일상에서 출발한 개인 앱을 소개합니다.
 comments: false
 ---
 
