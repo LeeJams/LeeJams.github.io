@@ -56,7 +56,7 @@ comments: false
       <p class="profile-section__lead">업무의 문제를 해결한 경험부터 직접 출시한 제품까지.</p>
       <section class="profile-project-group" id="company-projects" aria-labelledby="company-projects-title" data-project-group>
         <div class="profile-project-group__heading"><h3 id="company-projects-title">회사 프로젝트</h3><span class="profile-count">{{ company_projects.size }} projects</span></div>
-        <p class="profile-project-group__intro">업무에서 마주한 문제를 어떻게 풀고 개선했는지 정리했습니다.</p>
+        <p class="profile-project-group__intro">업무의 목적과 맡은 과제, 이를 풀기 위한 선택과 성과를 정리했습니다.</p>
         {% include portfolio-project-list.html projects=company_projects limit=6 list_id='company-project-list' %}
       </section>
       <section class="profile-project-group" id="personal-projects" aria-labelledby="personal-projects-title" data-project-group>

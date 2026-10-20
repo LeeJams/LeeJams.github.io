@@ -6,6 +6,8 @@ icon: /assets/img/projects/icons/organization-chart.svg
 category: 오픈소스
 order: 15
 role: "컴포넌트 설계·개발·npm 배포"
+problem: "서비스별로 다른 조직도 항목 표현과 선택 동작을 지원하는 것이 과제였습니다. 저는 Vue 3에서 서비스별 확장이 가능하고, 기존 이벤트 사용 방식도 유지할 수 있는 조직도 컴포넌트를 공개 패키지로 제공하고자 했습니다."
+solution: "노드 표현과 선택 후 동작을 서비스에서 바꿀 수 있는 API를 제공하고, 기존 이벤트와 함께 사용할 수 있도록 호환성을 유지했습니다."
 tech:
 - Vue 3
 - TypeScript

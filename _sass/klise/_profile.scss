@@ -208,7 +208,7 @@ body.profile-page-body {
       background: var(--profile-soft);
       img { display: block; width: 100%; height: 100%; margin: 0; object-fit: contain; }
     }
-    &__summary { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 20px; color: var(--profile-text); font-size: var(--profile-size-body); line-height: 1.75; }
+    &__summary { margin-bottom: 20px; color: var(--profile-text); font-size: var(--profile-size-body); line-height: 1.75; }
     &__story {
       display: grid;
       flex: 1;
@@ -225,6 +225,14 @@ body.profile-page-body {
     &__period { color: var(--profile-muted); }
     &__action { display: inline-flex; align-items: center; gap: 6px; margin-left: auto; white-space: nowrap; }
     &__arrow { flex: 0 0 18px; width: 18px; height: 18px; color: var(--profile-muted); transition: transform 180ms ease; }
+  }
+  .profile-project__summary,
+  .profile-project__story dd,
+  .profile-project__highlight > span:last-child {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
   #company-projects .profile-project__story { margin-bottom: 20px; }
   #personal-projects .profile-project { flex-basis: calc((100% - 20px) / 2); }

@@ -16,7 +16,7 @@
       <h4 class="profile-project__title">{{ project.title | escape }}</h4>
       {% if project.problem and project.solution %}
       <dl class="profile-project__story">
-        <div><dt>{% if project.problem_label %}{{ project.problem_label | escape }}{% elsif project.group == 'company' %}해결하려던 문제{% else %}발견한 문제{% endif %}</dt><dd>{{ project.problem | escape }}</dd></div>
+        <div><dt>{{ project.problem_label | default: '해결하고자 한 과제' | escape }}</dt><dd>{{ project.problem | escape }}</dd></div>
         <div><dt>해결 방식</dt><dd>{{ project.solution | escape }}</dd></div>
       </dl>
       {% else %}
