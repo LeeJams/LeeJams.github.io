@@ -3,7 +3,7 @@ title: 이재민 · Portfolio
 permalink: /about/
 layout: page
 body_class: profile-page-body
-description: 비즈니스의 맥락을 이해하고 기술을 실제로 쓰이는 제품으로 연결하는 개발자 이재민의 포트폴리오. 프로젝트, 경력, 자격증과 수상을 소개합니다.
+description: 서비스 성능을 개선하고 AI로 반복 업무를 줄이며, 일상의 불편을 앱으로 풀어가는 개발자 이재민의 포트폴리오입니다.
 comments: false
 ---
 
@@ -25,7 +25,7 @@ comments: false
       <img src="{{ site.author.avatar | relative_url }}" alt="개발자 이재민" width="1015" height="1015" fetchpriority="high" />
     </figure>
     <div class="profile-hero__content">
-      <p class="profile-hero__headline">문제를 이해하고,<br />쓰이는 결과를 만듭니다.</p>
+      <p class="profile-hero__headline">왜 필요한지 이해하고,<br />끝까지 만들어갑니다.</p>
       <p class="profile-hero__intro">{{ portfolio.intro }}</p>
       <div class="profile-actions" aria-label="프로필 링크">
         <a href="mailto:{{ site.author.email }}">이메일 <span aria-hidden="true">↗</span></a>
@@ -142,15 +142,13 @@ comments: false
 
   <section class="profile-closing" id="contact" aria-labelledby="contact-title">
     <p class="profile-eyebrow">Let's connect</p>
-    <h2 id="contact-title">함께 풀어야 할 문제가 있다면,<br />그 맥락부터 듣고 싶습니다.</h2>
+    <h2 id="contact-title">사용자와 팀의 과제,<br />함께 풀고 싶습니다.</h2>
     <p>
-      새로운 기능을 만드는 일부터, 느려진 서비스를 개선하고 반복되는 업무를 줄이는 일까지.
-      비즈니스의 맥락과 사용자의 불편을 먼저 이해한 뒤,
-      팀이 선택할 수 있는 현실적인 해법을 찾고 구현합니다.
+      새로운 기능의 기획부터 서비스 성능 개선, 반복 업무의 자동화까지 함께할 수 있습니다.
+      업무의 목적과 제약을 살피고, 팀이 실행할 수 있는 해법을 찾아 구현하겠습니다.
     </p>
     <p>
-      프론트엔드와 백엔드, 데이터와 운영을 오가며 쌓은 경험을 바탕으로
-      제품의 완성도와 팀의 실행력을 함께 높이고 싶습니다.
+      함께 일할 개발자를 찾고 계시거나 프로젝트 경험이 궁금하시다면, 편하게 연락 주세요.
     </p>
     <div class="profile-actions"><a href="mailto:{{ site.author.email }}">{{ site.author.email }} <span aria-hidden="true">↗</span></a><a href="{{ '/archive/' | relative_url }}">개발 기록 보기 <span aria-hidden="true">→</span></a></div>
   </section>
