@@ -3,7 +3,7 @@ title: 이재민 · Portfolio
 permalink: /about/
 layout: page
 body_class: profile-page-body
-description: 업무의 목적과 사용자의 상황을 먼저 살피는 풀스택 개발자 이재민의 포트폴리오입니다. 웹 서비스 개발·운영과 개인 앱 기획·출시 경험을 소개합니다.
+description: 업무의 목적과 사용자의 상황을 먼저 살피는 개발자 이재민의 포트폴리오입니다. 웹 서비스 개발·운영과 개인 앱 기획·출시 경험을 소개합니다.
 comments: false
 ---
 
@@ -25,7 +25,7 @@ comments: false
       <img src="{{ site.author.avatar | relative_url }}" alt="개발자 이재민" width="1015" height="1015" fetchpriority="high" />
     </figure>
     <div class="profile-hero__content">
-      <p class="profile-hero__headline">왜 만드는지부터 생각하는<br />풀스택 개발자입니다.</p>
+      <p class="profile-hero__headline">만드는 이유를 먼저 살피는<br />개발자입니다.</p>
       <p class="profile-hero__intro">{{ portfolio.intro }}</p>
       <div class="profile-actions" aria-label="프로필 링크">
         <a href="mailto:{{ site.author.email }}">이메일 <span aria-hidden="true">↗</span></a>
