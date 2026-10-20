@@ -148,7 +148,7 @@ comments: false
       서로의 경험과 아이디어를 나누며, 팀에 맞는 해법을 함께 찾아가고 싶습니다.
     </p>
     <p>
-      고민 중인 과제가 있다면, 편하게 연락 주세요.
+      가벼운 커피챗이나 개발 이야기도 환영합니다. 편하게 연락 주세요.
     </p>
     <div class="profile-actions"><a href="mailto:{{ site.author.email }}">{{ site.author.email }} <span aria-hidden="true">↗</span></a><a href="{{ '/archive/' | relative_url }}">개발 기록 보기 <span aria-hidden="true">→</span></a></div>
   </section>
