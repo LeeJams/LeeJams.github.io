@@ -142,13 +142,13 @@ comments: false
 
   <section class="profile-closing" id="contact" aria-labelledby="contact-title">
     <p class="profile-eyebrow">Let's connect</p>
-    <h2 id="contact-title">서비스는 더 빠르게,<br />반복 업무는 더 적게.</h2>
+    <h2 id="contact-title">재미있는 과제,<br />함께 풀고 싶습니다.</h2>
     <p>
-      느린 조회의 병목을 찾아 응답 시간을 줄이고, 반복되는 QA와 API 변경 검토를 AI로 자동화해 팀의 시간을 아낍니다.
-      판단 근거와 해결 과정을 남겨, 동료가 같은 문제를 다시 조사하는 부담도 줄입니다.
+      새로운 제품을 만드는 일도, 서비스의 병목과 반복 업무를 줄이는 일도 좋아합니다.
+      서로의 경험과 아이디어를 나누며, 팀에 맞는 해법을 함께 찾아가고 싶습니다.
     </p>
     <p>
-      함께 일할 개발자를 찾고 계시다면, 어떤 과제가 있는지 들려주세요.
+      고민 중인 과제가 있다면, 편하게 연락 주세요.
     </p>
     <div class="profile-actions"><a href="mailto:{{ site.author.email }}">{{ site.author.email }} <span aria-hidden="true">↗</span></a><a href="{{ '/archive/' | relative_url }}">개발 기록 보기 <span aria-hidden="true">→</span></a></div>
   </section>
