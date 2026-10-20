@@ -6,7 +6,7 @@ category: 웹
 organization: 개인 프로젝트
 period: 2026.01 - 2026.03
 role: 설계·개발
-order: 17
+order: 20
 tech: [TypeScript, React]
 highlight: 목록에서 보여줄 가장 중요한 성과 하나를 적습니다.
 achievements:
@@ -23,6 +23,7 @@ links:
 # solution: 그 과제를 어떤 판단과 구현으로 풀었는지 적습니다.
 # problem_label: 해결하고자 한 과제 # 기본값. 개선 작업은 '개선 배경과 목표', 개인 앱은 '만들게 된 이유' 등으로 지정
 # achievements_title: 운영하며 개선한 것 # 개인 앱의 기술 개선을 남길 때 사용
+# 수치 성과 대신 구현 결과를 소개할 때는 achievements_title: 주요 기여 로 지정합니다. 카드와 상세에 같은 제목을 사용합니다.
 # 선택 사항: 상세는 유지하고 더보기 안에 배치합니다.
 # more: true
 # 선택 사항: 관련 블로그 글. 제목과 작성일은 글에서 자동으로 가져옵니다.

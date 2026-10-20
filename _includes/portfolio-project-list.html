@@ -23,7 +23,7 @@
       <p class="profile-project__summary">{{ project.summary | escape }}</p>
       {% if project.listing_only and project.role %}<p class="profile-project__highlight"><span class="profile-project__highlight-label">담당 범위</span><span>{{ project.role | escape }}</span></p>{% endif %}
       {% endif %}
-      {% if project.highlight %}<p class="profile-project__highlight"><span class="profile-project__highlight-label">주요 성과</span><span>{{ project.highlight | escape }}</span></p>{% endif %}
+      {% if project.highlight %}<p class="profile-project__highlight"><span class="profile-project__highlight-label">{{ project.achievements_title | default: '주요 성과' | escape }}</span><span>{{ project.highlight | escape }}</span></p>{% endif %}
       {% if project.tech %}<p class="profile-project__tech">{{ project.tech | slice: 0, 3 | join: ' · ' | escape }}</p>{% elsif project.listing_only %}<p class="profile-project__tech">{{ project.links | map: 'label' | join: ' · ' | escape }}</p>{% endif %}
       <div class="profile-project__footer">
         <span class="profile-project__period">{{ project.period | escape }}</span>
