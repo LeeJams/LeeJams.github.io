@@ -21,9 +21,6 @@ comments: false
       <p class="profile-eyebrow">{{ portfolio.role }} · Portfolio</p>
       <h1 id="profile-title">{{ portfolio.name }} <span>LeeJam.</span></h1>
     </div>
-    <figure class="profile-hero__portrait">
-      <img src="{{ site.author.avatar | relative_url }}" alt="개발자 이재민" width="1015" height="1015" fetchpriority="high" />
-    </figure>
     <div class="profile-hero__content">
       <p class="profile-hero__headline">만드는 이유를 먼저 살피는<br />개발자입니다.</p>
       <p class="profile-hero__intro">{{ portfolio.intro }}</p>

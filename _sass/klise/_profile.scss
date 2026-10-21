@@ -51,15 +51,9 @@ body.profile-page-body {
   }
 
   .profile-hero {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 250px;
-    gap: 0 72px;
-    align-items: center;
     padding: 82px 0 72px;
 
-    &__identity, &__content { grid-column: 1; animation: profile-enter 500ms ease both; }
-    &__identity { align-self: end; }
-    &__content { align-self: start; }
+    &__identity, &__content { animation: profile-enter 500ms ease both; }
     h1 {
       margin: 20px 0 24px;
       font-size: var(--profile-size-display);
@@ -75,14 +69,7 @@ body.profile-page-body {
       font-weight: 700;
       line-height: 1.6;
     }
-    &__intro { max-width: 580px; font-size: var(--profile-size-body); line-height: 1.8; }
-    &__portrait {
-      grid-column: 2;
-      grid-row: 1 / span 2;
-      margin: 0;
-      animation: profile-enter 650ms 90ms ease both;
-      img { width: 250px; height: 300px; object-fit: cover; object-position: 38% center; border-radius: 2px; }
-    }
+    &__intro { max-width: 760px; font-size: var(--profile-size-body); line-height: 1.8; }
   }
 
   .profile-actions {
@@ -450,16 +437,10 @@ body.profile-page-body {
 
   @include media-query($on-mobile) {
     .profile-hero {
-      grid-template-columns: minmax(0, 1fr) 96px;
-      gap: 24px;
       padding: 84px 0 42px;
-      align-items: start;
-      h1 { margin: 12px 0 0; font-size: var(--profile-size-title); span { display: block; margin: 4px 0 0; font-size: inherit; } }
-      &__content { grid-column: 1 / -1; }
+      h1 { margin: 12px 0 24px; font-size: var(--profile-size-title); }
       &__headline { font-size: var(--profile-size-subheading); }
       &__intro { font-size: var(--profile-size-body); }
-      &__identity { align-self: center; }
-      &__portrait { grid-row: 1; padding: 0; align-self: center; img { width: 96px; height: 126px; } }
     }
     .profile-nav { top: 50px; gap: 24px; padding: 10px 0; overflow-x: auto; a { font-size: var(--profile-size-small); } }
     .profile-section { display: block; padding: 44px 0; scroll-margin-top: 120px; &__label { margin: 0 0 18px; } &__heading { gap: 12px; } &__body > h2, &__heading h2 { font-size: var(--profile-size-heading); } }
@@ -485,7 +466,7 @@ body.profile-page-body {
     .profile-detail__achievements li { grid-template-columns: 20px minmax(0, 1fr); gap: 12px; }
   }
   @media (prefers-reduced-motion: reduce) {
-    .profile-hero__identity, .profile-hero__content, .profile-hero__portrait { animation: none; }
+    .profile-hero__identity, .profile-hero__content { animation: none; }
     .profile-project__link, .profile-project__arrow, .profile-actions a span, .profile-store-links__arrow { transition: none; }
     .profile-project__link:hover, .profile-project__link:hover .profile-project__arrow, .profile-actions a:hover span, .profile-store-links a:hover .profile-store-links__arrow { transform: none; }
     .profile-modal[open] { animation: none; }
