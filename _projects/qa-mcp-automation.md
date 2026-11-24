@@ -16,6 +16,8 @@ tech:
   - API 연동
   - QA 자동화
 highlight: "반복 화면 탐색 축소 · 상품별 수정 이력 확인 · 실행 범위 제한"
+related_posts:
+  - /ai-qa-mcp-server/
 achievements:
   - title: "화면 이동 없이 상품 준비·전송"
     detail: "관리자 화면에서 쓰는 API를 도구로 묶어, 계정과 옵션 조건에 맞는 상품 생성·등록·수정 전송을 실행하도록 했습니다."
